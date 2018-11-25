@@ -119,32 +119,11 @@ function do_the_halfnarp() {
     }
 
     /* Tell QRCode library to update and/or display preferences for Apps */
-    $('#qrcode').empty();
-    $('#qrcode').qrcode({width: 224, height: 224, text: request});
-    $('#qrcode').removeClass('hidden');
+    redraw_qrcode(ids);
 
     /* Export all preferences in ical events */
-    var now = new Date();
-    var calendar = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//events.ccc.de//halfnarp//EN\r\nX-WR-TIMEZONE:Europe/Berlin\r\n';
-    ids.forEach( function(id) {
-      var item = all_events[id];
-      var start = new Date(item.start_time);
-      calendar += 'BEGIN:VEVENT\r\n';
-      calendar += 'UID:'+myuid+item.event_id+'\r\n';
-      calendar += 'DTSTAMP:' + now.toISOString().replace(/-|;|:|\./g, '').replace(/...Z$/, 'Z') + '\r\n';
-      calendar += 'DTSTART:' + start.toISOString().replace(/-|;|:|\./g, '').replace(/...Z$/, 'Z') + '\r\n';
-      calendar += 'DURATION:PT' + item.duration + 'S\r\n';
-      calendar += 'LOCATION:' + item.room_name + '\r\n';
-      calendar += 'URL:http://events.ccc.de/congress/2016/Fahrplan/events/' + item.event_id + '.html\r\n';
-      calendar += 'SUMMARY:' + item.title + '\r\n';
-      calendar += 'DESCRIPTION:' + item.abstract.replace(/\n|\r/g, ' ') + '\r\n';
-      console.log( 'id:' + id + ' ' + all_events[id] );
-      console.log( all_events[id].title );
-      calendar += 'END:VEVENT\r\n';
-    });
-    calendar += 'END:VCALENDAR\r\n';
-    $('.export-url-a').attr( 'href', "data:text/calendar;filename=34C3.ics," + encodeURIComponent(calendar) );
-    $('.export-url').removeClass( 'hidden' );
+    if (myuid)
+      redraw_calendar(myuid, ids);
   });
 
   /* Add handler for type ahead search input field */
@@ -318,6 +297,17 @@ function do_the_halfnarp() {
         }
       }
       // window.location.hash = '';
+
+      ids = $('.selected').map( function() { return parseInt($(this).attr('event_id')); }).get();
+      if (ids.length) {
+           redraw_qrcode(ids);
+           if (myuid)
+               redraw_calendar(myuid, ids);
+      }
+      $('#qrcode').click( function() {
+          $('body').toggleClass('qrcode-huge');
+          redraw_qrcode();
+      });
 
       /* Update friends cache
       for( var friend in friends ) {

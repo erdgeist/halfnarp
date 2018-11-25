@@ -319,7 +319,7 @@ header,
     padding-top: 1em;
     font-size: 2em;
     top: 350px;
-    width: 25%;
+    width: 24.5%;
     opacity: 0.1;
     z-position: -3;
 }
@@ -581,10 +581,24 @@ dl {
 #qrcode {
     display: inline-block;
     float: right;
+    cursor: pointer;
 
-    margin: 0 0.8em 0.8em 0;
-    width:  224px;
-    height: 224px;
+    margin: 5px 0.8em 0;
+    padding 0;
+    border: 0;
+    width:  68px;
+    height: 68px;
+}
+
+.qrcode-huge #qrcode {
+    position: fixed;
+    display: block;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 400px;
+    padding: 0;
 }
 
 *[draggable=true] {
