@@ -21,25 +21,72 @@ header {
 .narpr {
     position: fixed;
     top: 3em;
-    bottom: 11rem;
+    bottom: 9rem;
     left: 3em;
     border: 4px solid black;
     background: white;
     width: 88%;
-    height: auto;
     padding: 1em;
     min-height: 50em;
     border-radius: 10px;
     overflow-y:scroll;
     overflow-x:hidden;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+}
+.narpr_swpipy.large {
+  font-size: 20em;
+}
+.narpr_swipy {
+  background: linear-gradient(to right, #0084B0 00%, #00A356 100% );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-variant: small-caps;
+  font-size: 4em;
+  position: relative;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.narpr-beta {
+    display: inline-block;
+    float: right;
+    width: 4em;
+    background: linear-gradient(to right, #0084B0 -100%, #00A356 200% );
+    border: 2px black solid;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    padding-top: 1.0em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: white !important;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .narpr_done {
     float: right;
+    bottom: 0px;
+    margin-top: 1em;
     padding: 0.2em;
     font-size: 3em;
-    background: grey;
+    background: linear-gradient(to right, #0084B0 -100%, #00A356 200% );
     border: 2px black solid;
+    font-color: white;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -53,6 +100,7 @@ header {
     color: grey;
     font-size: 3em;
     font-variant: small-caps;
+    margin-top: 1em;
 }
 
 .narpr_title {
@@ -92,7 +140,6 @@ header {
 }
 
 @media (max-width: 800px) {
-header,
 .footer,
 .track-list {
     font-size: 0.8em;
@@ -308,16 +355,16 @@ header,
 }
 
 .event.selected {
-    background: red;
+    background: green;
 }
 
 /* Outer glow for selected events in other display modes */
 .languages .event.selected,
 .all-tracks .event.selected,
 .correlate .event.selected {
-    -webkit-box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
-    box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
+    box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
 }
 
 .selected.friend {
@@ -326,8 +373,8 @@ header,
           45deg,
           purple,
           purple 20px,
-          red 20px,
-          red 40px /* determines size */
+          green 20px,
+          green 40px /* determines size */
         ) !important;
         color: white;
 }
@@ -513,7 +560,7 @@ hr.guide {
 .fullnarp.in-list .event.day_2,
 .fullnarp.in-list .event.day_3,
 .fullnarp.in-list .event.day_4 {
-    background-color: green;
+    background-color: blue;
     color: white;
 }
 
@@ -548,7 +595,7 @@ hr.guide {
 
 .selected:hover,
 .friend:hover {
-    background: pink !important;
+    background: lime !important;
     color: black;
 }
 
@@ -570,7 +617,7 @@ hr.guide {
     font-weight: bold;
 }
 
-.languages .lang_de { background: lime !important; }
+.languages .lang_de { background: pink !important; }
 .languages .lang_en { background: cyan !important; }
 .corr-hint { display: none; font-weight: bold; }
 .correlate .corr-hint { display: initial !important; }
