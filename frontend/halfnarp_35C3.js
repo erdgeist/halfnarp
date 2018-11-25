@@ -85,9 +85,9 @@ function do_the_halfnarp() {
 
   $('.narpr_done').click( function(ev) {
       $('.narpr').toggleClass('hidden', true);
-      if (!window.narp_alerted) {
-          window.narp_alerted = true;
-          alert("Don't forget to SUBMIT!");
+      if (!window.narpr_alerted) {
+          window.narpr_alerted = true;
+          alert("Thank you for using narpr(β). Don't forget to SUBMIT!");
       }
   });
 
@@ -100,19 +100,24 @@ function do_the_halfnarp() {
   } });
 
   $('.narpr').on({ 'touchmove' : function(ev) {
+    var narp_view = $('.narpr');
      if (ev.originalEvent.touches.length > 1) {
-         $('.narpr').css('background', 'white');
+         narp_view.css('background', 'white');
          window.touch_valid = false;
      }
     if (!window.touch_valid)
         return;
      if (ev.originalEvent.touches[0].clientX > window.touch_startX + 100)
-        $('.narpr').css('background', 'green');
+        narp_view.css('background', 'green');
      else if (ev.originalEvent.touches[0].clientX < window.touch_startX - 100)
-        $('.narpr').css('background', 'red');
+        narp_view.css('background', 'red');
      else
-        $('.narpr').css('background', '#ddd');
+        narp_view.css('background', '#ddd');
      window.touch_curX = ev.originalEvent.touches[0].clientX;
+
+    // console.log(narp_view[0].clientHeight + ':' + narp_view[0].scrollHeight);
+    if( narp_view[0].clientHeight >= narp_view[0].scrollHeight)
+        ev.preventDefault();
   } });
 
   $('.narpr').on({ 'touchend' : function(ev) {
@@ -309,6 +314,9 @@ function do_the_halfnarp() {
           t.find('.title').text(item.title);
           t.find('.speakers').text(item.speaker_names);
           t.find('.abstract').append(item.abstract);
+
+          if (item.event_classifiers && item.event_classifiers['Foundations'] && item.event_classifiers['Foundations'] > 40.0)
+                t.addClass('foundation');
 
           /* start_time: 2014-12-29T21:15:00+01:00" */
           var start_time = new Date(item.start_time);
