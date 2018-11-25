@@ -43,6 +43,49 @@ function toggle_classifier(classifier, is_track, is_range) {
   $('body').attr('classifier', classifier);
 }
 
+function redraw_qrcode(ids) {
+    if (!ids)
+       ids = $('.selected').map( function() { return parseInt($(this).attr('event_id')); }).get();
+    if ($('#qrcode').hasClass('hidden') && ids.length == 0 )
+       return;
+    var request = JSON.stringify({'talk_ids': ids});
+    var size = 68;
+    if($('body').hasClass('qrcode-huge')) {
+      size = 400;
+    }
+
+    $('#qrcode').empty();
+    $('#qrcode').qrcode({width: size, height: size, text: request});
+    $('#qrcode').removeClass('hidden');
+}
+
+function redraw_calendar(myuid, ids) {
+    if (!ids)
+       ids = $('.selected').map( function() { return parseInt($(this).attr('event_id')); }).get();
+
+    var now = new Date();
+    var calendar = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//events.ccc.de//halfnarp//EN\r\nX-WR-TIMEZONE:Europe/Berlin\r\n';
+    ids.forEach( function(id) {
+      var item = all_events[id];
+      var start = new Date(item.start_time);
+      calendar += 'BEGIN:VEVENT\r\n';
+      calendar += 'UID:'+myuid+item.event_id+'\r\n';
+      calendar += 'DTSTAMP:' + now.toISOString().replace(/-|;|:|\./g, '').replace(/...Z$/, 'Z') + '\r\n';
+      calendar += 'DTSTART:' + start.toISOString().replace(/-|;|:|\./g, '').replace(/...Z$/, 'Z') + '\r\n';
+      calendar += 'DURATION:PT' + item.duration + 'S\r\n';
+      calendar += 'LOCATION:' + item.room_name + '\r\n';
+      calendar += 'URL:http://events.ccc.de/congress/2016/Fahrplan/events/' + item.event_id + '.html\r\n';
+      calendar += 'SUMMARY:' + item.title + '\r\n';
+      calendar += 'DESCRIPTION:' + item.abstract.replace(/\n|\r/g, ' ') + '\r\n';
+      console.log( 'id:' + id + ' ' + all_events[id] );
+      console.log( all_events[id].title );
+      calendar += 'END:VEVENT\r\n';
+    });
+    calendar += 'END:VCALENDAR\r\n';
+    $('.export-url-a').attr( 'href', "data:text/calendar;filename=34C3.ics," + encodeURIComponent(calendar) );
+    $('.export-url').removeClass( 'hidden' );
+}
+
 function do_the_halfnarp() {
 //  var halfnarpAPI      = 'talks_34C3.json';
   var halfnarpAPI     = '/-/talkpreferences';
