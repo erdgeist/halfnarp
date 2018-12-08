@@ -6,10 +6,10 @@ function toggle_grid(whichDay) {
   $('body').addClass(vclasses[whichDay]);
 }
 
-function distribute_votes(votes) {
+function distribute_votes() {
   $('.event').each( function( index, element ) {
     var eid = $(element).attr('event_id');
-    var abs = votes[eid];
+    var abs = window.votes[eid];
     var klasse = 5000;
     if (abs < 2000) { klasse = 2000; }
     if (abs < 1000) { klasse = 1000; }
@@ -19,23 +19,69 @@ function distribute_votes(votes) {
     if (abs < 50)   { klasse = 50;  }
     if (abs < 20)   { klasse = 20;  }
     if (abs < 10)   { klasse = 10;  }
-    $(element).addClass('class_'+klasse);
+    if (!abs)       klasse = 10;
 
-    var abselem = document.createElement('div');
-    $(abselem).text(''+abs);
-    $(abselem).addClass('absval');
-    $(abselem).insertBefore(element.firstChild);
+    var abselem = $(element).find('.absval');
+    if (!abselem.length) {
+      var abselem = document.createElement('div');
+      $(abselem).text(''+abs);
+      $(abselem).addClass('absval');
+      $(abselem).insertBefore(element.firstChild);
+    } else
+      $(abselem[0]).text(''+abs);
+    $(element).addClass('class_'+klasse);
   });
 }
 
-function distribute_lang(langs) {
-  $('.event').each( function( index, element ) {
-    var eid = $(element).attr('event_id');
-    var lang = langs[eid] || 'en';
-    $(element).addClass('lang_'+lang);
-    mark_avail(element);
+function corr_for_eventids(id1, id2) {
+  var d = 0, c = 0, cd = 0, l = window.raw_votes.length;
+  $.each( $(window.raw_votes), function( i, item ) {
+    var x = 0;
+    if( item.indexOf(id1) > -1 ) { ++d; x++;}
+    if( item.indexOf(id2) > -1 ) { ++c; cd+=x; }
   });
-  getFullnarpData(window.lastupdate);
+
+  var mid = 0;
+  // if ( d * c ) mid = Math.round( 4.0 * ( ( cd * l ) / ( c * d ) ) * ( cd / d + cd / c ) );
+  if ( d * c ) mid = Math.round( 4 * l * cd * cd * ( c + d ) / ( c * c * d * d ) )
+  if (mid>9) mid=9;
+  return mid;
+}
+
+function show_all_correlates(el) {
+    /* First identify the room to see what other rooms to consider
+       correlates always grow from the top slot to the right,
+       unless there's an overlapping event to the left that starts earlier
+    */
+    var event_room = $(el).attr('fullnarp-room');
+    var event_day = $(el).attr('fullnarp-day');
+    var event_time = $(el).attr('fullnarp-time');
+
+    if (!event_time) return;
+
+    var event_start = time_to_mins(event_time);
+    var event_duration = $(el).attr('fullnarp-duration') / 60;
+
+    /* Only test events to the right, if they start at the exact same time */
+    $('.event.day_'+event_day).each(function(index,check_el) {
+        var check_room = $(check_el).attr('fullnarp-room');
+        if (event_room == check_room) return;
+
+        var check_time = $(check_el).attr('fullnarp-time');
+        if (!check_time) return;
+        var check_start = time_to_mins(check_time);
+        var check_duration = $(check_el).attr('fullnarp-duration') / 60;
+        var dist = $(check_el).attr('fullnarp-room') - event_room;
+        var overlap = check_start < event_start + event_duration && event_start < check_start + check_duration;
+
+        if (!overlap) return;
+        if (event_start == check_start && dist <= 0) return;
+        if (event_start < check_start) return;
+
+        var corr = corr_for_eventids(1*$(el).attr('event_id'), 1*$(check_el).attr('event_id'));
+        var dir = dist > 0 ? 'r' : 'l';
+        $("<div/>").addClass('corrweb ' + dir.repeat(Math.abs(dist)) + ' day_'+event_day+' room' + event_room + ' time_'+event_time + ' corr_d_' + corr).appendTo('body');
+    })
 }
 
 function display_correlation() {
@@ -45,22 +91,33 @@ function display_correlation() {
     $('.event').each( function( index, element ) {
       mark_correlation(element, selected );
     });
-    $('body').addClass('absolute');
-  } else {
-    alert( "Select exactly one lecture to calculate correlations.");
   }
+  if ($('body').hasClass('correlate'))
+    distribute_votes();
+  $('body').toggleClass('correlate');
 }
 
 function mark_correlation(dest, comp) {
-  var event_id_dest = 1 * $(dest).attr('event_id');
-  var event_id_comp = 1 * $(comp).attr('event_id');
-  var d = 0, c = 0, cd = 0;
+  var id1 = 1*$(dest).attr('event_id');
+  var id2 = 1*$(comp).attr('event_id');
+  var d = 0, c = 0, cd = 0, l = window.raw_votes.length;
   $.each( $(window.raw_votes), function( i, item ) {
     var x = 0;
-    if( item.indexOf(event_id_dest) > -1 ) { ++d; x++;}
-    if( item.indexOf(event_id_comp) > -1 ) { ++c; cd+=x; }
+    if( item.indexOf(id1) > -1 ) { ++d; x++;}
+    if( item.indexOf(id2) > -1 ) { ++c; cd+=x; }
   });
-  $(dest).find('.absval').text(d + ':' + cd + ':' + Math.round( 100 * cd / d ) + '%:' + Math.round( 100 * cd / c ) + '%' );
+
+  var mid = 0;
+  // if ( d * c ) mid = Math.round( 4.0 * ( ( cd * l ) / ( c * d ) ) * ( cd / d + cd / c ) );
+  if ( d * c ) mid = Math.round( 4 * l * cd * cd * ( c + d ) / ( c * c * d * d ) )
+  if (mid>9) mid=9;
+
+  $(dest).removeClass(function (index, css) {
+    return (css.match (/\bcorr_\S+/g) || []).join(' ');
+  });
+  $(dest).attr('corr',mid);
+  $(dest).find('.absval').text(mid + ':' + Math.round( 100 * cd / d ) + '%:' + Math.round( 100 * cd / c ) + '%' );
+
 }
 
 function mark_avail(el) {
@@ -69,58 +126,59 @@ function mark_avail(el) {
 
 function time_to_mins(time) {
   var hour_mins = /(\d\d)(\d\d)/.exec(time);
-  if( hour_mins[1] < 11 ) { hour_mins[1] = 24 + hour_mins[1]; }
+  if( hour_mins[1] < 9 ) { hour_mins[1] = 24 + hour_mins[1]; }
   return 60 * hour_mins[1] + 1 * hour_mins[2];
 }
 
 function check_avail(el, day, time ) {
   var all_available = true;
+  var speakers = window.event_speakers[$(el).attr('event_id')];
+
+  if (!speakers)
+      return false;
 
   /* Check availability of all speakers */
-  $.each(window.avails[$(el).attr('event_id')], function(i,speaker) {
-    /* Speaker should be an array of strings now */
-
-    /* If no availability is set, assume available */
-    if( speaker.length == 0 ) {
-        return true;
-    }
+  $.each(speakers, function(i,speaker) {
 
     /* Now if at least one day is set, each missing
        day means unavailable, */
-    var unavail = true;
-    $.each(speaker,function(j,availstring) {
+    var have_avails = false, unavail = true;
+    $.each(speaker.availabilities,function(j,a) {
 
-      /* Format is 2x.12. xx:xx - yy:yy */
-      var match = /(\d\d)\.12\. (\d\d):(\d\d) - (\d\d):(\d\d)/.exec(availstring);
-      if( !match ) { return true; }
-
-      switch( match[1] ) {
-        case '27': if( day != '1' ) { return true; } break;
-        case '28': if( day != '2' ) { return true; } break;
-        case '29': if( day != '3' ) { return true; } break;
-        case '30': if( day != '4' ) { return true; } break;
+      switch( a.day_id ) {
+        case 370: if( day != '1' ) { have_avails = true; return true; } break;
+        case 371: if( day != '2' ) { have_avails = true; return true; } break;
+        case 372: if( day != '3' ) { have_avails = true; return true; } break;
+        case 373: if( day != '4' ) { have_avails = true; return true; } break;
         default: return true;
       }
+      have_avails = true;
 
-      /* We found availstring for the day */
+      /* We found availability for the day */
       var event_times    = /(\d\d)(\d\d)/.exec(time);
       var event_duration = $(el).attr('fullnarp-duration') / 60;
 
+      var availtime_start = new Date(a.start_date);
+      var availtime_end   = new Date(a.end_date);
+
       /* Check start time, we calculate in minutes since 00:00 */
-      var avail_start = match[2]; if( avail_start < 11 ) { avail_start = 24 + avail_start; }
-      var avail_end   = match[4]; if( avail_end   < 11 ) { avail_end   = 24 + avail_end; }
-      var avail_start = 60 * avail_start + 1 * match[3];
-      var avail_end   = 60 * avail_end   + 1 * match[5];
+      var event_start = Number(event_times[1]);
+      var avail_start = availtime_start.getHours();
+      var avail_end   = availtime_end.getHours();
 
-      var event_start = event_times[1]; if( event_start < 11 ) { event_start = 24 + event_start; }
-      var event_start = 60 * event_start + 1 * event_times[2];
+      if( avail_start < 9 ) { avail_start = 24 + avail_start; }
+      if( avail_end   < 9 ) { avail_end   = 24 + avail_end; }
+      if( event_start < 9 ) { event_start = 24 + event_start; }
 
-      if( event_start >= avail_start && event_start + event_duration <= avail_end ) {
+      var event_start = 60 * event_start + 1 * Number(event_times[2]);
+      var avail_start = 60 * avail_start + 1 * availtime_start.getMinutes();
+      var avail_end   = 60 * avail_end   + 1 * availtime_end.getMinutes();
+
+      if( event_start >= avail_start && event_start + event_duration <= avail_end )
         unavail = false;
-      }
     });
     /* If at least one speaker is unavail, check fails */
-    if( unavail ) {
+    if( have_avails && unavail ) {
       all_available = false;
       return false;
     }
@@ -153,6 +211,20 @@ function mark_conflict(el) {
   $(el).toggleClass('conflict', conflict );
 }
 
+/* remove day, room and time from an event */
+function remove_event(event_id) {
+  var el = $('#'+event_id);
+  el.addClass('pending');
+  $.getJSON( 'longpoll?lastupdate='+window.lastupdate+'&removeevent='+event_id+'&callback=?', { format: 'json' })
+  .done(function( data ) {
+    el.removeClass('failed');
+  })
+  .fail(function() {
+    el.removeClass('pending');
+    el.addClass('failed');
+  });
+}
+
 /* provide time OR hour + minute, time overrides */
 function set_all_attributes(event_id, day, room, time, from_server) {
     var el = $('#'+event_id);
@@ -161,23 +233,32 @@ function set_all_attributes(event_id, day, room, time, from_server) {
     });
     el.addClass( time + ' ' + day + ' ' + room );
     var li = { 'room': room, 'day': day, 'time': time };
-    localStorage[ '32C3-fullnarp-'+event_id ] = JSON.stringify(li);
     el.attr('fullnarp-day',  li['day'].replace('day_',''));
     el.attr('fullnarp-time', li['time'].replace('time_',''));
     el.attr('fullnarp-room', li['room'].replace('room',''));
+    el.removeClass('pending');
 
     if (!from_server) {
+       el.addClass('pending');
        $.getJSON( 'longpoll?lastupdate='+window.lastupdate+'&setevent='+event_id+'&day='+el.attr('fullnarp-day')+'&room='+el.attr('fullnarp-room')+'&time='+el.attr('fullnarp-time')+'&callback=?', { format: 'json' })
            .done(function( data ) {
-                /* should process return array */
+                el.removeClass('failed');
            })
-        }
+           .fail(function() {
+                el.removeClass('pending');
+                el.addClass('failed');
+        });
+    }
 
     /* When moving an element, conflict may have been resolved ... */
     $('.conflict').each(function(index,check) { mark_conflict(check); });
     /* ... or introduced */
     mark_conflict(el);
     mark_avail(el);
+    if ($('body').hasClass('showcorrweb')) {
+      $('.corrweb').remove();
+      $('.event').each(function(index, elem) { show_all_correlates(elem); } );
+    }
 }
 
 function getFullnarpData(lastupdate) {
@@ -196,7 +277,8 @@ function getFullnarpData(lastupdate) {
         success: function(response) {
             // append the message list with the new message
             $.each(response.data, function(eventid,event_new) {
-                set_all_attributes(eventid, 'day_'+event_new['day'], 'room'+event_new['room'], 'time_'+event_new['time'], true )
+                if($('#'+eventid).length)
+                    set_all_attributes(eventid, 'day_'+event_new['day'], 'room'+event_new['room'], 'time_'+event_new['time'], true )
             });
             // set lastupdate
             window.lastupdate = response.current_version;
@@ -214,21 +296,18 @@ function getFullnarpData(lastupdate) {
 };
 
 function do_the_fullnarp() {
-  var halfnarpAPI     = 'talks_32c3.json';
-  var fullnarpAPI     = 'votes_32c3.json';
-  var availAPI        = 'avails_32c3.json';
+  var halfnarpAPI     = 'talks_35C3.json';
+  var fullnarpAPI     = 'votes_35c3.json';
   // var halfnarpAPI  = '/-/talkpreferences';
   var halfnarpPubAPI  = halfnarpAPI + '/public/';
   var myuid, mypid    = new Object();
-  var allrooms        = ['1','2','g','6']
-  var allminutes      = ['00','15','30','45']
+  var allrooms        = ['1','2','3','4','5']
+  var allminutes      = ['00','10','20','30','40','50']
   var allhours        = ['11','12','13','14','15','16','17','18','19','20','21','22','23','00','01'];
   var alldays         = ['1','2','3','4'];
-  var votes           = {};
   var voted           = 0;
-  var langs           = {};
-  var langed          = 0;
-  window.avails       = {};
+  window.event_speakers = {};
+  window.votes          = {};
 
   /* Add poor man's type ahead filtering */
   $.extend($.expr[':'], {
@@ -277,7 +356,30 @@ function do_the_fullnarp() {
   $('.vleft').click( function() { $('body').toggleClass('still-left'); });
   $('.vhalf').click( function()  { $('body').toggleClass('absolute'); });
   $('.vcorr').click( display_correlation );
+  $('.vtrack').click( function() { $('body').toggleClass('all-tracks'); });
   $('.vlang').click( function() { $('body').toggleClass('languages'); });
+  $('.vweb').click( function() {
+    if ($('body').hasClass('showcorrweb'))
+      $('.corrweb').remove();
+    else
+      $('.event').each(function(index, elem) { show_all_correlates(elem); } );
+    $('body').toggleClass('showcorrweb');
+  });
+
+  /* Make the trashbin a drop target */
+  $('.trashbin')
+    .attr('dropzone','move')
+    .on('dragover', function (event) {
+      event.preventDefault(); // allows us to drop
+      $(this).addClass('over');
+      return false;
+    })
+    .on('dragleave', function (event) { $(this).removeClass('over'); })
+    .on('drop', function (event) {
+      event.stopPropagation();
+      set_all_attributes(event.originalEvent.dataTransfer.getData('Text'), 'day_0', 'room_0', 'time_0000', false);
+      return false;
+    });
 
   /* Create hour guides */
   $(allhours).each(function(i,hour) {
@@ -290,40 +392,30 @@ function do_the_fullnarp() {
     $('body').append(elem);
 
     $(allminutes).each(function(i,minute) {
-        $(allrooms).each(function(i,room) {
-            $(alldays).each(function(i,day) {
-                elem = document.createElement('div');
-                $(elem).addClass('grid time_' + hour + minute + ' day_' + day + ' room' + room );
-                $(elem).text( minute );
-                $(elem).attr('dropzone','move');
-                $('body').append(elem);
-                $(elem).on( 'dragover', function (event) {
-                    event.preventDefault(); // allows us to drop
-                    $(this).addClass('over');
-                    return false;
-                  });
-                $(elem).on( 'dragleave', function (event) { $(this).removeClass('over'); });
-                $(elem).on( 'drop', function (event) {
-                    event.stopPropagation();
-                    set_all_attributes( event.originalEvent.dataTransfer.getData('Text'), 'day_' + day, 'room' + room, 'time_' + hour + minute, false );
-                    /* Don't go back to list view on successful drop */
-                    $('body').removeClass('was-list');
-                    return false;
-                  });
-            } );
-        } );
-    } );
-
-  } );
-
-  /* If we've been here before, try to get local preferences. They are authoratative */
-  var selection = [], friends = { 'foo': undefined };
-  try {
-    selection = localStorage['32C3-halfnarp'] || [];
-    myuid     = localStorage['32C3-halfnarp-uid'] || '';
-    mypid     = localStorage['32C3-halfnarp-pid'] || '';
-  } catch(err) {
-  }
+      $(allrooms).each(function(i,room) {
+        $(alldays).each(function(i,day) {
+          elem = document.createElement('div');
+          $(elem).addClass('grid time_' + hour + minute + ' day_' + day + ' room' + room );
+          $(elem).text( minute );
+          $(elem).attr('dropzone','move');
+          $('body').append(elem);
+          $(elem).on('dragover', function (event) {
+            event.preventDefault(); // allows us to drop
+            $(this).addClass('over');
+            return false;
+          });
+          $(elem).on('dragleave', function (event) { $(this).removeClass('over'); });
+          $(elem).on('drop', function (event) {
+            event.stopPropagation();
+            set_all_attributes(event.originalEvent.dataTransfer.getData('Text'), 'day_' + day, 'room' + room, 'time_' + hour + minute, false );
+            /* Don't go back to list view on successful drop */
+            $('body').removeClass('was-list');
+            return false;
+          });
+        });
+      });
+    });
+  });
 
   /* Fetch list of votes to display */
   $.getJSON( fullnarpAPI, { format: 'json' })
@@ -333,21 +425,14 @@ function do_the_fullnarp() {
 
         /* Now we should have a list of event-ids */
         $(item).each(function( i, eventid) {
-          votes[eventid] = 1 + (votes[eventid] || 0 );
+          window.votes[eventid] = 1 + (window.votes[eventid] || 0 );
         } );
       });
-      if( ++voted == 2 ) { distribute_votes(votes); }
-    });
-
-  /* Fetch languages and availabilities */
-  $.getJSON( availAPI, { format: 'json' })
-    .done(function( data ) {
-      $.each( data, function( i, item ) {
-        langs[i] = item['lang'];
-        delete item['lang'];
-        window.avails[i] = item;
-      });
-    if( ++langed == 2 ) { distribute_lang(langs); }
+      if( ++voted == 2 ) {
+        window.lastupdate = 0;
+        distribute_votes();
+        getFullnarpData(0);
+      }
     });
 
   /* Fetch list of lectures to display */
@@ -358,37 +443,50 @@ function do_the_fullnarp() {
              list of previous prereferences */
           var t = $( '#template' ).clone(true);
           var event_id = item.event_id.toString();
-          t.addClass('event');
+          t.addClass('event duration_' + item.duration + ' lang_' + (item.language || 'en'));
           t.attr('event_id', event_id );
           t.attr('id', 'event_' + event_id )
-          t.attr('fullnarp-duration', item.duration);
+          t.attr( 'fullnarp-duration', item.duration);
 
           /* Sort textual info into event div */
           t.find('.title').text(item.title);
-          t.find('.speakers').text(item.speakers);
+          t.find('.speakers').text(item.speaker_names);
           t.find('.abstract').append(item.abstract);
 
+          /* Store speakers and their availabilities */
+          window.event_speakers[event_id] = item.speakers;
+
+          $.each(item.speakers, function(i,speaker) {
+              var have_avails = false;
+              if (!speaker.availabilities)
+                console.log("Foo");
+              $.each(speaker.availabilities, function(j,a) {
+                  switch( a.day_id ) {
+                  case 370: case 371: case 372: case 373: have_avails = true; return true;
+                  default: return true;
+                  }
+              });
+              if (!have_avails)
+                t.addClass('has_unavailable_speaker');
+          });
+
           t.attr('draggable', 'true');
-          if( selection && selection.indexOf(item.event_id) != -1 ) {
-            t.addClass( 'selected' );
-          }
 
           /* Make the event drag&droppable */
           t.on( "dragstart", function( event, ui ) {
+            event.stopPropagation();
+
             event.originalEvent.dataTransfer.setData('text/plain', this.id );
             event.originalEvent.dataTransfer.dropEffect = 'move';
             event.originalEvent.dataTransfer.effectAllowed = 'move';
+            $(event.target).addClass('is-dragged');
           } );
 
           /* While dragging make source element small enough to allow
              dropping below its original area */
           t.on( "drag", function( event, ui ) {
-            if     ( $('body').hasClass('size-large') )  { height = '50px'; }
-            else if( $('body').hasClass('size-medium') ) { height = '30px'; }
-            else                                         { height = '20px'; }
-            event.target.style.height = height;
-            event.target.style.maxHeight = height;
-            event.target.style.overflowY = "hidden";
+            event.stopPropagation();
+            $(event.target).addClass('is-dragged');
 
             /* When drag starts in list view, switch to calendar view */
             if( $('body').hasClass('in-list') ) {
@@ -398,7 +496,6 @@ function do_the_fullnarp() {
             if( $('body').hasClass('in-drag') ) {
                 return;
             }
-
             $('body').addClass('in-drag');
             /* mark all possible drop points regarding to availability */
             $(allhours).each(function(i,hour) {
@@ -411,52 +508,52 @@ function do_the_fullnarp() {
 
           });
           t.on( "dragend", function( event, ui ) {
+            event.stopPropagation();
+
             $('.over').removeClass('over');
-            event.target.style.height = "";
-            event.target.style.maxHeight = "";
-            event.target.style.overflowY = "";
 
             /* We removed in-list and the drop did not succeed. Go back to list view */
             if($('body').hasClass('was-list')) {
               $('body').removeClass('was-list');
               toggle_grid(0);
             }
+            $('.is-dragged').removeClass('is-dragged');
             $('body').removeClass('in-drag');
             $('.possible').removeClass('possible');
           } );
 
-          var li = JSON.parse( localStorage[ '32C3-fullnarp-event_'+event_id ] || '{}' );
-          if( li['room'] ) {
-            t.addClass(li['room'] + ' duration_' + item.duration + ' ' + li['day'] + ' ' + li['time'] );
-            t.attr('fullnarp-day',  li['day'].replace('day_',''));
-            t.attr('fullnarp-time', li['time'].replace('time_',''));
-            t.attr('fullnarp-room', li['room'].replace('room',''));
-          } else {
-              /* start_time: 2014-12-29T21:15:00+01:00" */
-              var start_time = new Date(item.start_time);
+          /* start_time: 2014-12-29T21:15:00+01:00" */
+          var start_time = new Date(item.start_time);
 
-              var day  = start_time.getDate()-26;
-              var hour = start_time.getHours();
-              var mins = start_time.getMinutes();
+          var day  = start_time.getDate()-26;
+          var hour = start_time.getHours();
+          var mins = start_time.getMinutes();
 
-              /* After midnight: sort into yesterday */
-              if( hour < 10 ) {
-                  day--;
-              }
+          /* After midnight: sort into yesterday */
+          if( hour < 9 )
+              day--;
 
-              /* Fix up room for 32c3 */
-              room = (item.room_id || '').toString().replace('359','room1').replace('360','room2').replace('361','roomg').replace('362','room6');
+          /* Fix up room for 35c3 */
+          room = (item.room_id || '').toString().replace('421','room1').replace('422','room2').replace('423','room3').replace('424','room4').replace('425','room5');
 
-              /* Apply attributes to sort events into calendar */
-              t.addClass( room + ' duration_' + item.duration + ' day_'+day + ' time_' + (hour<10?'0':'') + hour + '' + (mins<10?'0':'') + mins);
-              t.attr('fullnarp-day', day);
-              t.attr('fullnarp-time', (hour<10?'0':'') + hour + (mins<10?'0':'') + mins );
-              t.attr('fullnarp-room', room.replace('room',''));
-          }
+          /* Apply attributes to sort events into calendar */
+          t.addClass( room + ' day_'+day + ' time_' + (hour<10?'0':'') + hour + '' + (mins<10?'0':'') + mins );
+          t.attr('fullnarp-day', day);
+          t.attr('fullnarp-time', (hour<10?'0':'') + hour + (mins<10?'0':'') + mins );
+          t.attr('fullnarp-room', room.replace('room',''));
+
+          mark_avail(t);
 
           t.click( function(event) {
+            _this = $(this);
             $('body').removeClass('in-drag');
-            $( this ).toggleClass('selected');
+            if ($('body').hasClass('correlate')) {
+              $('.selected').toggleClass('selected');
+              $('.event').each( function( index, element ) {
+                mark_correlation(element, _this);
+              });
+            }
+            _this.toggleClass('selected');
             $('.info').addClass('hidden');
             event.stopPropagation();
           });
@@ -471,8 +568,11 @@ function do_the_fullnarp() {
           d.append(t);
       });
 
-      if( ++voted == 2 ) { distribute_votes(votes); }
-      if( ++langed == 2 ) { distribute_lang(langs); }
+      if( ++voted == 2 ) {
+        window.lastupdate = 0;
+        distribute_votes();
+        getFullnarpData(0);
+      }
     });
 
   $(document).keypress(function(e) {
@@ -481,14 +581,16 @@ function do_the_fullnarp() {
       return;
     switch( e.charCode ) {
       case 115: case 83: /* s */
+/*
         var selected = $('.selected');
         if( selected.length != 2 ) return;
-        var li1 = JSON.parse( localStorage[ '32C3-fullnarp-'+selected[0].id ] || '{}' );
-        var li2 = JSON.parse( localStorage[ '32C3-fullnarp-'+selected[1].id ] || '{}' );
+        var li1 = JSON.parse( localStorage[ '33C3-fullnarp-'+selected[0].id ] || '{}' );
+        var li2 = JSON.parse( localStorage[ '33C3-fullnarp-'+selected[1].id ] || '{}' );
         if( li1['room'] && li2['room'] ) {
           set_all_attributes( $(selected[1]).attr('id'), li1['day'], li1['room'], li1['time'], false );
           set_all_attributes( $(selected[0]).attr('id'), li2['day'], li2['room'], li2['time'], false );
         }
+*/
         break;
       case 48: case 94: /* 0 */
         toggle_grid(5);
@@ -512,6 +614,9 @@ function do_the_fullnarp() {
       case 81: case 113: /* q */
         $('.selected').removeClass('selected');
         break;
+      case 84: case 116: /* t */
+        $('body').toggleClass('all-tracks');
+        break;
       case 85: case 117: /* u */
         $('body').toggleClass('still-left');
         break;
@@ -520,6 +625,4 @@ function do_the_fullnarp() {
         break;
     }
   });
-
-  window.lastupdate = 0;
 }

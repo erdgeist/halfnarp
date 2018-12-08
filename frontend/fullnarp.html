@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>fullnarp web scheduling helper app</title>
-  <link rel="stylesheet" href="style.css">
+  <title>FULLnarp web scheduling helper app</title>
+  <link rel="stylesheet" href="style_35C3.css">
+  <link rel="stylesheet" href="style_35C3_tables.css">
   <script src="jquery-1.11.1.min.js"></script>
   <script src="jquery.qrcode.min.js"></script>
   <script src="fullnarp.js"></script>
@@ -19,8 +20,9 @@
     <div class="abstract"></div>
   </div>
 </div>
+<div class="trashbin">🗑️</div>
 <div class="version">version</div>
-<div class="headline">The 32C3 fullnarp</div>
+<div class="headline">The 35C3 fullnarp</div>
 <div class="header">
 <div class="leftbox">
 <input id="filter" type="text" placeholder="Filter events"/>
@@ -35,7 +37,10 @@
 <div class="views vleft" title="Show only events not yet in calendar (Hotkey: U)">unset</div>
 <div class="views vhalf" title="Display halfnarp votes (Hotkey: H)">half</div>
 <div class="views vcorr" title="Calculate correlations for currently selected talk (Hotkey: C)">corr</div>
+<div class="views vtrack" title="Color event by track (Hotkey: T)">track</div>
 <div class="views vlang" title="Color event by language (Hotkey: I)">lang</div>
+<div class="views vweb" title="Show correlation web">web</div>
+
 
 <div class="allboxes">
 <div class="vsmallboxes boxer">size</div><div class="vmediumboxes boxer">Size</div><div class="vlargeboxes boxer">SIZE</div>
@@ -43,30 +48,31 @@
 </div>
 </div>
 </div>
-<div class="day_1 room-label room1">Saal 1</div><div class="day_1 room-label room2">Saal 2</div><div class="day_1 room-label roomg">Saal G</div><div class="day_1 room-label room6">Saal 6</div>
-<div class="day_2 room-label room1 ">Saal 1</div><div class="day_2 room-label room2 ">Saal 2</div><div class="day_2 room-label roomg ">Saal G</div><div class="day_2 room-label room6 ">Saal 6</div>
-<div class="day_3 room-label room1 ">Saal 1</div><div class="day_3 room-label room2 ">Saal 2</div><div class="day_3 room-label roomg ">Saal G</div><div class="day_3 room-label room6 ">Saal 6</div>
-<div class="day_4 room-label room1 ">Saal 1</div><div class="day_4 room-label room2 ">Saal 2</div><div class="day_4 room-label roomg ">Saal G</div><div class="day_4 room-label room6 ">Saal 6</div>
+<div class="day_1 room-label room1">Saal 1</div><div class="day_1 room-label room2">Saal 2</div><div class="day_1 room-label room3">Saal 3</div><div class="day_1 room-label room4">Saal 4</div><div class="day_1 room-label room5">Saal 5</div>
+<div class="day_2 room-label room1 ">Saal 1</div><div class="day_2 room-label room2 ">Saal 2</div><div class="day_2 room-label room3 ">Saal 3</div><div class="day_2 room-label room4 ">Saal 4</div><div class="day_2 room-label room5">Saal 5</div>
+<div class="day_3 room-label room1 ">Saal 1</div><div class="day_3 room-label room2 ">Saal 2</div><div class="day_3 room-label room3 ">Saal 3</div><div class="day_3 room-label room4 ">Saal 4</div><div class="day_3 room-label room5">Saal 5</div>
+<div class="day_4 room-label room1 ">Saal 1</div><div class="day_4 room-label room2 ">Saal 2</div><div class="day_4 room-label room3 ">Saal 3</div><div class="day_4 room-label room4 ">Saal 4</div><div class="day_4 room-label room5">Saal 5</div>
 
-<div class=" time_1500 duration_3600 guide pause ">P A U S E</div>
-<div class=" time_1930 duration_3600 guide pause ">P A U S E</div>
-<div class=" time_1600 wholeblock room1 guide day_2"></div>
+<div class=" time_1510 duration_3600 guide pause ">P A U S E</div>
+<div class=" time_1950 duration_3600 guide pause ">P A U S E</div>
+<!--div class=" time_1600 wholeblock room1 guide day_2"></div>
 <div class=" time_2030 wholeblock room1 guide day_3"></div>
-<div class=" time_1130 wholeblock room1 guide day_4"></div>
+<div class=" time_1130 wholeblock room1 guide day_4"></div-->
 
-<div class=" time_2030 duration_inf guide ende room1 day_4 "></div>
+<div class=" time_1820 duration_inf guide ende room1 day_4 "></div>
 
-<div class="wholeday room1 day_1 guide"></div>
-<div class="wholeday room1 day_3 guide"></div>
+<div class="wholeday room1 day_1 guide uneven"></div>
+<div class="wholeday room1 day_3 guide uneven"></div>
 
-<div class="track" id="300"><h2>CCC</h2><div id="qrcode" class="hidden"></div></div>
-<div class="track" id="291"><h2>Art &amp; Culture</h2></div>
-<div class="track" id="301"><h2>Entertainment</h2></div>
-<div class="track" id="294"><h2>Ethics, Society &amp; Politics</h2></div>
-<div class="track" id="295"><h2>Hardware &amp; Making</h2></div>
-<div class="track" id="297"><h2>Science</h2></div>
-<div class="track" id="298"><h2>Security</div>
-<div class="track" id="299"><h2>Failosophy</h2></div>
+<div class="track" id="338"><h2>Art &amp; Culture</h2></div>
+<div class="track" id="344"><h2>CCC</h2></div>
+<div class="track" id="345"><h2>Entertainment</h2></div>
+<div class="track" id="339"><h2>Ethics, Society &amp; Politics</h2></div>
+<div class="track" id="340"><h2>Hardware &amp; Making</h2></div>
+<div class="track" id="341"><h2>Resilience</div>
+<div class="track" id="342"><h2>Science</h2></div>
+<div class="track" id="343"><h2>Security</div>
+<div class="track" id="999"><h2>Other</div>
 
 </body>
 </html>
