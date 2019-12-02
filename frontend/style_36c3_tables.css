@@ -1,0 +1,716 @@
+.size-large .time_1000 { top: 400px; }
+.size-large .time_1010 { top: 433.3333333333333px; }
+.size-large .time_1020 { top: 466.66666666666663px; }
+.size-large .time_1030 { top: 499.99999999999994px; }
+.size-large .time_1040 { top: 533.3333333333333px; }
+.size-large .time_1050 { top: 566.6666666666666px; }
+.size-large .time_1100 { top: 600.0px; }
+.size-large .time_1110 { top: 633.3333333333334px; }
+.size-large .time_1120 { top: 666.6666666666667px; }
+.size-large .time_1130 { top: 700.0000000000001px; }
+.size-large .time_1140 { top: 733.3333333333335px; }
+.size-large .time_1150 { top: 766.6666666666669px; }
+.size-large .time_1200 { top: 800.0000000000002px; }
+.size-large .time_1210 { top: 833.3333333333336px; }
+.size-large .time_1220 { top: 866.666666666667px; }
+.size-large .time_1230 { top: 900.0000000000003px; }
+.size-large .time_1240 { top: 933.3333333333337px; }
+.size-large .time_1250 { top: 966.6666666666671px; }
+.size-large .time_1300 { top: 1000.0000000000005px; }
+.size-large .time_1310 { top: 1033.3333333333337px; }
+.size-large .time_1320 { top: 1066.666666666667px; }
+.size-large .time_1330 { top: 1100.0000000000002px; }
+.size-large .time_1340 { top: 1133.3333333333335px; }
+.size-large .time_1350 { top: 1166.6666666666667px; }
+.size-large .time_1400 { top: 1200.0px; }
+.size-large .time_1410 { top: 1233.3333333333333px; }
+.size-large .time_1420 { top: 1266.6666666666665px; }
+.size-large .time_1430 { top: 1299.9999999999998px; }
+.size-large .time_1440 { top: 1333.333333333333px; }
+.size-large .time_1450 { top: 1366.6666666666663px; }
+.size-large .time_1500 { top: 1399.9999999999995px; }
+.size-large .time_1510 { top: 1433.3333333333328px; }
+.size-large .time_1520 { top: 1466.666666666666px; }
+.size-large .time_1530 { top: 1499.9999999999993px; }
+.size-large .time_1540 { top: 1533.3333333333326px; }
+.size-large .time_1550 { top: 1566.6666666666658px; }
+.size-large .time_1600 { top: 1599.999999999999px; }
+.size-large .time_1610 { top: 1633.3333333333323px; }
+.size-large .time_1620 { top: 1666.6666666666656px; }
+.size-large .time_1630 { top: 1699.9999999999989px; }
+.size-large .time_1640 { top: 1733.3333333333321px; }
+.size-large .time_1650 { top: 1766.6666666666654px; }
+.size-large .time_1700 { top: 1799.9999999999986px; }
+.size-large .time_1710 { top: 1833.333333333332px; }
+.size-large .time_1720 { top: 1866.6666666666652px; }
+.size-large .time_1730 { top: 1899.9999999999984px; }
+.size-large .time_1740 { top: 1933.3333333333317px; }
+.size-large .time_1750 { top: 1966.666666666665px; }
+.size-large .time_1800 { top: 1999.9999999999982px; }
+.size-large .time_1810 { top: 2033.3333333333314px; }
+.size-large .time_1820 { top: 2066.6666666666647px; }
+.size-large .time_1830 { top: 2099.999999999998px; }
+.size-large .time_1840 { top: 2133.3333333333317px; }
+.size-large .time_1850 { top: 2166.666666666665px; }
+.size-large .time_1900 { top: 2199.9999999999986px; }
+.size-large .time_1910 { top: 2233.333333333332px; }
+.size-large .time_1920 { top: 2266.6666666666656px; }
+.size-large .time_1930 { top: 2299.999999999999px; }
+.size-large .time_1940 { top: 2333.3333333333326px; }
+.size-large .time_1950 { top: 2366.666666666666px; }
+.size-large .time_2000 { top: 2399.9999999999995px; }
+.size-large .time_2010 { top: 2433.333333333333px; }
+.size-large .time_2020 { top: 2466.6666666666665px; }
+.size-large .time_2030 { top: 2500.0px; }
+.size-large .time_2040 { top: 2533.3333333333335px; }
+.size-large .time_2050 { top: 2566.666666666667px; }
+.size-large .time_2100 { top: 2600.0000000000005px; }
+.size-large .time_2110 { top: 2633.333333333334px; }
+.size-large .time_2120 { top: 2666.6666666666674px; }
+.size-large .time_2130 { top: 2700.000000000001px; }
+.size-large .time_2140 { top: 2733.3333333333344px; }
+.size-large .time_2150 { top: 2766.666666666668px; }
+.size-large .time_2200 { top: 2800.0000000000014px; }
+.size-large .time_2210 { top: 2833.333333333335px; }
+.size-large .time_2220 { top: 2866.6666666666683px; }
+.size-large .time_2230 { top: 2900.000000000002px; }
+.size-large .time_2240 { top: 2933.3333333333353px; }
+.size-large .time_2250 { top: 2966.666666666669px; }
+.size-large .time_2300 { top: 3000.0000000000023px; }
+.size-large .time_2310 { top: 3033.3333333333358px; }
+.size-large .time_2320 { top: 3066.6666666666692px; }
+.size-large .time_2330 { top: 3100.0000000000027px; }
+.size-large .time_2340 { top: 3133.333333333336px; }
+.size-large .time_2350 { top: 3166.6666666666697px; }
+.size-large .time_0000 { top: 3200.000000000003px; }
+.size-large .time_0010 { top: 3233.3333333333367px; }
+.size-large .time_0020 { top: 3266.66666666667px; }
+.size-large .time_0030 { top: 3300.0000000000036px; }
+.size-large .time_0040 { top: 3333.333333333337px; }
+.size-large .time_0050 { top: 3366.6666666666706px; }
+.size-large .time_0100 { top: 3400.000000000004px; }
+.size-large .time_0110 { top: 3433.3333333333376px; }
+.size-large .time_0120 { top: 3466.666666666671px; }
+.size-large .time_0130 { top: 3500.0000000000045px; }
+.size-large .time_0140 { top: 3533.333333333338px; }
+.size-large .time_0150 { top: 3566.6666666666715px; }
+.size-large .time_0200 { top: 3600.000000000005px; }
+.size-large .time_0210 { top: 3633.3333333333385px; }
+.size-large .time_0220 { top: 3666.666666666672px; }
+.size-large .time_0230 { top: 3700.0000000000055px; }
+.size-large .time_0240 { top: 3733.333333333339px; }
+.size-large .time_0250 { top: 3766.6666666666724px; }
+.size-medium .time_1000 { top: 400px; }
+.size-medium .time_1010 { top: 420.0px; }
+.size-medium .time_1020 { top: 440.0px; }
+.size-medium .time_1030 { top: 460.0px; }
+.size-medium .time_1040 { top: 480.0px; }
+.size-medium .time_1050 { top: 500.0px; }
+.size-medium .time_1100 { top: 520.0px; }
+.size-medium .time_1110 { top: 540.0px; }
+.size-medium .time_1120 { top: 560.0px; }
+.size-medium .time_1130 { top: 580.0px; }
+.size-medium .time_1140 { top: 600.0px; }
+.size-medium .time_1150 { top: 620.0px; }
+.size-medium .time_1200 { top: 640.0px; }
+.size-medium .time_1210 { top: 660.0px; }
+.size-medium .time_1220 { top: 680.0px; }
+.size-medium .time_1230 { top: 700.0px; }
+.size-medium .time_1240 { top: 720.0px; }
+.size-medium .time_1250 { top: 740.0px; }
+.size-medium .time_1300 { top: 760.0px; }
+.size-medium .time_1310 { top: 780.0px; }
+.size-medium .time_1320 { top: 800.0px; }
+.size-medium .time_1330 { top: 820.0px; }
+.size-medium .time_1340 { top: 840.0px; }
+.size-medium .time_1350 { top: 860.0px; }
+.size-medium .time_1400 { top: 880.0px; }
+.size-medium .time_1410 { top: 900.0px; }
+.size-medium .time_1420 { top: 920.0px; }
+.size-medium .time_1430 { top: 940.0px; }
+.size-medium .time_1440 { top: 960.0px; }
+.size-medium .time_1450 { top: 980.0px; }
+.size-medium .time_1500 { top: 1000.0px; }
+.size-medium .time_1510 { top: 1020.0px; }
+.size-medium .time_1520 { top: 1040.0px; }
+.size-medium .time_1530 { top: 1060.0px; }
+.size-medium .time_1540 { top: 1080.0px; }
+.size-medium .time_1550 { top: 1100.0px; }
+.size-medium .time_1600 { top: 1120.0px; }
+.size-medium .time_1610 { top: 1140.0px; }
+.size-medium .time_1620 { top: 1160.0px; }
+.size-medium .time_1630 { top: 1180.0px; }
+.size-medium .time_1640 { top: 1200.0px; }
+.size-medium .time_1650 { top: 1220.0px; }
+.size-medium .time_1700 { top: 1240.0px; }
+.size-medium .time_1710 { top: 1260.0px; }
+.size-medium .time_1720 { top: 1280.0px; }
+.size-medium .time_1730 { top: 1300.0px; }
+.size-medium .time_1740 { top: 1320.0px; }
+.size-medium .time_1750 { top: 1340.0px; }
+.size-medium .time_1800 { top: 1360.0px; }
+.size-medium .time_1810 { top: 1380.0px; }
+.size-medium .time_1820 { top: 1400.0px; }
+.size-medium .time_1830 { top: 1420.0px; }
+.size-medium .time_1840 { top: 1440.0px; }
+.size-medium .time_1850 { top: 1460.0px; }
+.size-medium .time_1900 { top: 1480.0px; }
+.size-medium .time_1910 { top: 1500.0px; }
+.size-medium .time_1920 { top: 1520.0px; }
+.size-medium .time_1930 { top: 1540.0px; }
+.size-medium .time_1940 { top: 1560.0px; }
+.size-medium .time_1950 { top: 1580.0px; }
+.size-medium .time_2000 { top: 1600.0px; }
+.size-medium .time_2010 { top: 1620.0px; }
+.size-medium .time_2020 { top: 1640.0px; }
+.size-medium .time_2030 { top: 1660.0px; }
+.size-medium .time_2040 { top: 1680.0px; }
+.size-medium .time_2050 { top: 1700.0px; }
+.size-medium .time_2100 { top: 1720.0px; }
+.size-medium .time_2110 { top: 1740.0px; }
+.size-medium .time_2120 { top: 1760.0px; }
+.size-medium .time_2130 { top: 1780.0px; }
+.size-medium .time_2140 { top: 1800.0px; }
+.size-medium .time_2150 { top: 1820.0px; }
+.size-medium .time_2200 { top: 1840.0px; }
+.size-medium .time_2210 { top: 1860.0px; }
+.size-medium .time_2220 { top: 1880.0px; }
+.size-medium .time_2230 { top: 1900.0px; }
+.size-medium .time_2240 { top: 1920.0px; }
+.size-medium .time_2250 { top: 1940.0px; }
+.size-medium .time_2300 { top: 1960.0px; }
+.size-medium .time_2310 { top: 1980.0px; }
+.size-medium .time_2320 { top: 2000.0px; }
+.size-medium .time_2330 { top: 2020.0px; }
+.size-medium .time_2340 { top: 2040.0px; }
+.size-medium .time_2350 { top: 2060.0px; }
+.size-medium .time_0000 { top: 2080.0px; }
+.size-medium .time_0010 { top: 2100.0px; }
+.size-medium .time_0020 { top: 2120.0px; }
+.size-medium .time_0030 { top: 2140.0px; }
+.size-medium .time_0040 { top: 2160.0px; }
+.size-medium .time_0050 { top: 2180.0px; }
+.size-medium .time_0100 { top: 2200.0px; }
+.size-medium .time_0110 { top: 2220.0px; }
+.size-medium .time_0120 { top: 2240.0px; }
+.size-medium .time_0130 { top: 2260.0px; }
+.size-medium .time_0140 { top: 2280.0px; }
+.size-medium .time_0150 { top: 2300.0px; }
+.size-medium .time_0200 { top: 2320.0px; }
+.size-medium .time_0210 { top: 2340.0px; }
+.size-medium .time_0220 { top: 2360.0px; }
+.size-medium .time_0230 { top: 2380.0px; }
+.size-medium .time_0240 { top: 2400.0px; }
+.size-medium .time_0250 { top: 2420.0px; }
+.size-small .time_1000 { top: 400px; }
+.size-small .time_1010 { top: 413.3333333333333px; }
+.size-small .time_1020 { top: 426.66666666666663px; }
+.size-small .time_1030 { top: 439.99999999999994px; }
+.size-small .time_1040 { top: 453.33333333333326px; }
+.size-small .time_1050 { top: 466.6666666666666px; }
+.size-small .time_1100 { top: 479.9999999999999px; }
+.size-small .time_1110 { top: 493.3333333333332px; }
+.size-small .time_1120 { top: 506.6666666666665px; }
+.size-small .time_1130 { top: 519.9999999999999px; }
+.size-small .time_1140 { top: 533.3333333333333px; }
+.size-small .time_1150 { top: 546.6666666666666px; }
+.size-small .time_1200 { top: 560.0px; }
+.size-small .time_1210 { top: 573.3333333333334px; }
+.size-small .time_1220 { top: 586.6666666666667px; }
+.size-small .time_1230 { top: 600.0000000000001px; }
+.size-small .time_1240 { top: 613.3333333333335px; }
+.size-small .time_1250 { top: 626.6666666666669px; }
+.size-small .time_1300 { top: 640.0000000000002px; }
+.size-small .time_1310 { top: 653.3333333333336px; }
+.size-small .time_1320 { top: 666.666666666667px; }
+.size-small .time_1330 { top: 680.0000000000003px; }
+.size-small .time_1340 { top: 693.3333333333337px; }
+.size-small .time_1350 { top: 706.6666666666671px; }
+.size-small .time_1400 { top: 720.0000000000005px; }
+.size-small .time_1410 { top: 733.3333333333338px; }
+.size-small .time_1420 { top: 746.6666666666672px; }
+.size-small .time_1430 { top: 760.0000000000006px; }
+.size-small .time_1440 { top: 773.3333333333339px; }
+.size-small .time_1450 { top: 786.6666666666673px; }
+.size-small .time_1500 { top: 800.0000000000007px; }
+.size-small .time_1510 { top: 813.333333333334px; }
+.size-small .time_1520 { top: 826.6666666666674px; }
+.size-small .time_1530 { top: 840.0000000000008px; }
+.size-small .time_1540 { top: 853.3333333333342px; }
+.size-small .time_1550 { top: 866.6666666666675px; }
+.size-small .time_1600 { top: 880.0000000000009px; }
+.size-small .time_1610 { top: 893.3333333333343px; }
+.size-small .time_1620 { top: 906.6666666666677px; }
+.size-small .time_1630 { top: 920.000000000001px; }
+.size-small .time_1640 { top: 933.3333333333344px; }
+.size-small .time_1650 { top: 946.6666666666678px; }
+.size-small .time_1700 { top: 960.0000000000011px; }
+.size-small .time_1710 { top: 973.3333333333345px; }
+.size-small .time_1720 { top: 986.6666666666679px; }
+.size-small .time_1730 { top: 1000.0000000000013px; }
+.size-small .time_1740 { top: 1013.3333333333346px; }
+.size-small .time_1750 { top: 1026.6666666666679px; }
+.size-small .time_1800 { top: 1040.0000000000011px; }
+.size-small .time_1810 { top: 1053.3333333333344px; }
+.size-small .time_1820 { top: 1066.6666666666677px; }
+.size-small .time_1830 { top: 1080.000000000001px; }
+.size-small .time_1840 { top: 1093.3333333333342px; }
+.size-small .time_1850 { top: 1106.6666666666674px; }
+.size-small .time_1900 { top: 1120.0000000000007px; }
+.size-small .time_1910 { top: 1133.333333333334px; }
+.size-small .time_1920 { top: 1146.6666666666672px; }
+.size-small .time_1930 { top: 1160.0000000000005px; }
+.size-small .time_1940 { top: 1173.3333333333337px; }
+.size-small .time_1950 { top: 1186.666666666667px; }
+.size-small .time_2000 { top: 1200.0000000000002px; }
+.size-small .time_2010 { top: 1213.3333333333335px; }
+.size-small .time_2020 { top: 1226.6666666666667px; }
+.size-small .time_2030 { top: 1240.0px; }
+.size-small .time_2040 { top: 1253.3333333333333px; }
+.size-small .time_2050 { top: 1266.6666666666665px; }
+.size-small .time_2100 { top: 1279.9999999999998px; }
+.size-small .time_2110 { top: 1293.333333333333px; }
+.size-small .time_2120 { top: 1306.6666666666663px; }
+.size-small .time_2130 { top: 1319.9999999999995px; }
+.size-small .time_2140 { top: 1333.3333333333328px; }
+.size-small .time_2150 { top: 1346.666666666666px; }
+.size-small .time_2200 { top: 1359.9999999999993px; }
+.size-small .time_2210 { top: 1373.3333333333326px; }
+.size-small .time_2220 { top: 1386.6666666666658px; }
+.size-small .time_2230 { top: 1399.999999999999px; }
+.size-small .time_2240 { top: 1413.3333333333323px; }
+.size-small .time_2250 { top: 1426.6666666666656px; }
+.size-small .time_2300 { top: 1439.9999999999989px; }
+.size-small .time_2310 { top: 1453.3333333333321px; }
+.size-small .time_2320 { top: 1466.6666666666654px; }
+.size-small .time_2330 { top: 1479.9999999999986px; }
+.size-small .time_2340 { top: 1493.333333333332px; }
+.size-small .time_2350 { top: 1506.6666666666652px; }
+.size-small .time_0000 { top: 1519.9999999999984px; }
+.size-small .time_0010 { top: 1533.3333333333317px; }
+.size-small .time_0020 { top: 1546.666666666665px; }
+.size-small .time_0030 { top: 1559.9999999999982px; }
+.size-small .time_0040 { top: 1573.3333333333314px; }
+.size-small .time_0050 { top: 1586.6666666666647px; }
+.size-small .time_0100 { top: 1599.999999999998px; }
+.size-small .time_0110 { top: 1613.3333333333312px; }
+.size-small .time_0120 { top: 1626.6666666666645px; }
+.size-small .time_0130 { top: 1639.9999999999977px; }
+.size-small .time_0140 { top: 1653.333333333331px; }
+.size-small .time_0150 { top: 1666.6666666666642px; }
+.size-small .time_0200 { top: 1679.9999999999975px; }
+.size-small .time_0210 { top: 1693.3333333333308px; }
+.size-small .time_0220 { top: 1706.666666666664px; }
+.size-small .time_0230 { top: 1719.9999999999973px; }
+.size-small .time_0240 { top: 1733.3333333333305px; }
+.size-small .time_0250 { top: 1746.6666666666638px; }
+.size-large .duration_300 { min-height: 11.666666666666668px; max-height:  11.666666666666668px; }
+.size-large .duration_400 { min-height: 17.22222222222222px; max-height:  17.22222222222222px; }
+.size-large .duration_500 { min-height: 22.77777777777778px; max-height:  22.77777777777778px; }
+.size-large .duration_600 { min-height: 28.333333333333336px; max-height:  28.333333333333336px; }
+.size-large .duration_700 { min-height: 33.888888888888886px; max-height:  33.888888888888886px; }
+.size-large .duration_800 { min-height: 39.44444444444444px; max-height:  39.44444444444444px; }
+.size-large .duration_900 { min-height: 45.0px; max-height:  45.0px; }
+.size-large .duration_1000 { min-height: 50.55555555555556px; max-height:  50.55555555555556px; }
+.size-large .duration_1100 { min-height: 56.111111111111114px; max-height:  56.111111111111114px; }
+.size-large .duration_1200 { min-height: 61.66666666666667px; max-height:  61.66666666666667px; }
+.size-large .duration_1300 { min-height: 67.22222222222223px; max-height:  67.22222222222223px; }
+.size-large .duration_1400 { min-height: 72.77777777777777px; max-height:  72.77777777777777px; }
+.size-large .duration_1500 { min-height: 78.33333333333333px; max-height:  78.33333333333333px; }
+.size-large .duration_1600 { min-height: 83.88888888888889px; max-height:  83.88888888888889px; }
+.size-large .duration_1700 { min-height: 89.44444444444444px; max-height:  89.44444444444444px; }
+.size-large .duration_1800 { min-height: 95.0px; max-height:  95.0px; }
+.size-large .duration_1900 { min-height: 100.55555555555556px; max-height:  100.55555555555556px; }
+.size-large .duration_2000 { min-height: 106.11111111111111px; max-height:  106.11111111111111px; }
+.size-large .duration_2100 { min-height: 111.66666666666667px; max-height:  111.66666666666667px; }
+.size-large .duration_2200 { min-height: 117.22222222222223px; max-height:  117.22222222222223px; }
+.size-large .duration_2300 { min-height: 122.77777777777777px; max-height:  122.77777777777777px; }
+.size-large .duration_2400 { min-height: 128.33333333333334px; max-height:  128.33333333333334px; }
+.size-large .duration_2500 { min-height: 133.88888888888889px; max-height:  133.88888888888889px; }
+.size-large .duration_2600 { min-height: 139.44444444444446px; max-height:  139.44444444444446px; }
+.size-large .duration_2700 { min-height: 145.0px; max-height:  145.0px; }
+.size-large .duration_2800 { min-height: 150.55555555555554px; max-height:  150.55555555555554px; }
+.size-large .duration_2900 { min-height: 156.11111111111111px; max-height:  156.11111111111111px; }
+.size-large .duration_3000 { min-height: 161.66666666666666px; max-height:  161.66666666666666px; }
+.size-large .duration_3100 { min-height: 167.22222222222223px; max-height:  167.22222222222223px; }
+.size-large .duration_3200 { min-height: 172.77777777777777px; max-height:  172.77777777777777px; }
+.size-large .duration_3300 { min-height: 178.33333333333334px; max-height:  178.33333333333334px; }
+.size-large .duration_3400 { min-height: 183.88888888888889px; max-height:  183.88888888888889px; }
+.size-large .duration_3500 { min-height: 189.44444444444446px; max-height:  189.44444444444446px; }
+.size-large .duration_3600 { min-height: 195.0px; max-height:  195.0px; }
+.size-large .duration_3700 { min-height: 200.55555555555554px; max-height:  200.55555555555554px; }
+.size-large .duration_3800 { min-height: 206.11111111111111px; max-height:  206.11111111111111px; }
+.size-large .duration_3900 { min-height: 211.66666666666666px; max-height:  211.66666666666666px; }
+.size-large .duration_4000 { min-height: 217.22222222222223px; max-height:  217.22222222222223px; }
+.size-large .duration_4100 { min-height: 222.77777777777777px; max-height:  222.77777777777777px; }
+.size-large .duration_4200 { min-height: 228.33333333333334px; max-height:  228.33333333333334px; }
+.size-large .duration_4300 { min-height: 233.88888888888889px; max-height:  233.88888888888889px; }
+.size-large .duration_4400 { min-height: 239.44444444444446px; max-height:  239.44444444444446px; }
+.size-large .duration_4500 { min-height: 245.0px; max-height:  245.0px; }
+.size-large .duration_4600 { min-height: 250.55555555555554px; max-height:  250.55555555555554px; }
+.size-large .duration_4700 { min-height: 256.1111111111111px; max-height:  256.1111111111111px; }
+.size-large .duration_4800 { min-height: 261.6666666666667px; max-height:  261.6666666666667px; }
+.size-large .duration_4900 { min-height: 267.22222222222223px; max-height:  267.22222222222223px; }
+.size-large .duration_5000 { min-height: 272.77777777777777px; max-height:  272.77777777777777px; }
+.size-large .duration_5100 { min-height: 278.3333333333333px; max-height:  278.3333333333333px; }
+.size-large .duration_5200 { min-height: 283.8888888888889px; max-height:  283.8888888888889px; }
+.size-large .duration_5300 { min-height: 289.44444444444446px; max-height:  289.44444444444446px; }
+.size-large .duration_5400 { min-height: 295.0px; max-height:  295.0px; }
+.size-large .duration_5500 { min-height: 300.55555555555554px; max-height:  300.55555555555554px; }
+.size-large .duration_5600 { min-height: 306.1111111111111px; max-height:  306.1111111111111px; }
+.size-large .duration_5700 { min-height: 311.6666666666667px; max-height:  311.6666666666667px; }
+.size-large .duration_5800 { min-height: 317.22222222222223px; max-height:  317.22222222222223px; }
+.size-large .duration_5900 { min-height: 322.77777777777777px; max-height:  322.77777777777777px; }
+.size-large .duration_6000 { min-height: 328.3333333333333px; max-height:  328.3333333333333px; }
+.size-large .duration_6100 { min-height: 333.8888888888889px; max-height:  333.8888888888889px; }
+.size-large .duration_6200 { min-height: 339.44444444444446px; max-height:  339.44444444444446px; }
+.size-large .duration_6300 { min-height: 345.0px; max-height:  345.0px; }
+.size-large .duration_6400 { min-height: 350.55555555555554px; max-height:  350.55555555555554px; }
+.size-large .duration_6500 { min-height: 356.1111111111111px; max-height:  356.1111111111111px; }
+.size-large .duration_6600 { min-height: 361.6666666666667px; max-height:  361.6666666666667px; }
+.size-large .duration_6700 { min-height: 367.22222222222223px; max-height:  367.22222222222223px; }
+.size-large .duration_6800 { min-height: 372.77777777777777px; max-height:  372.77777777777777px; }
+.size-large .duration_6900 { min-height: 378.3333333333333px; max-height:  378.3333333333333px; }
+.size-large .duration_7000 { min-height: 383.8888888888889px; max-height:  383.8888888888889px; }
+.size-large .duration_7100 { min-height: 389.44444444444446px; max-height:  389.44444444444446px; }
+.size-large .duration_7200 { min-height: 395.0px; max-height:  395.0px; }
+.size-large .duration_7300 { min-height: 400.55555555555554px; max-height:  400.55555555555554px; }
+.size-large .duration_7400 { min-height: 406.1111111111111px; max-height:  406.1111111111111px; }
+.size-large .duration_7500 { min-height: 411.6666666666667px; max-height:  411.6666666666667px; }
+.size-large .duration_7600 { min-height: 417.22222222222223px; max-height:  417.22222222222223px; }
+.size-large .duration_7700 { min-height: 422.77777777777777px; max-height:  422.77777777777777px; }
+.size-large .duration_7800 { min-height: 428.3333333333333px; max-height:  428.3333333333333px; }
+.size-large .duration_7900 { min-height: 433.8888888888889px; max-height:  433.8888888888889px; }
+.size-large .duration_8000 { min-height: 439.44444444444446px; max-height:  439.44444444444446px; }
+.size-large .duration_8100 { min-height: 445.0px; max-height:  445.0px; }
+.size-large .duration_8200 { min-height: 450.55555555555554px; max-height:  450.55555555555554px; }
+.size-large .duration_8300 { min-height: 456.1111111111111px; max-height:  456.1111111111111px; }
+.size-large .duration_8400 { min-height: 461.6666666666667px; max-height:  461.6666666666667px; }
+.size-large .duration_8500 { min-height: 467.22222222222223px; max-height:  467.22222222222223px; }
+.size-large .duration_8600 { min-height: 472.77777777777777px; max-height:  472.77777777777777px; }
+.size-large .duration_8700 { min-height: 478.3333333333333px; max-height:  478.3333333333333px; }
+.size-large .duration_8800 { min-height: 483.8888888888889px; max-height:  483.8888888888889px; }
+.size-large .duration_8900 { min-height: 489.44444444444446px; max-height:  489.44444444444446px; }
+.size-large .duration_9000 { min-height: 495.0px; max-height:  495.0px; }
+.size-large .duration_9100 { min-height: 500.55555555555554px; max-height:  500.55555555555554px; }
+.size-large .duration_9200 { min-height: 506.1111111111111px; max-height:  506.1111111111111px; }
+.size-large .duration_9300 { min-height: 511.66666666666663px; max-height:  511.66666666666663px; }
+.size-large .duration_9400 { min-height: 517.2222222222222px; max-height:  517.2222222222222px; }
+.size-large .duration_9500 { min-height: 522.7777777777778px; max-height:  522.7777777777778px; }
+.size-large .duration_9600 { min-height: 528.3333333333334px; max-height:  528.3333333333334px; }
+.size-large .duration_9700 { min-height: 533.8888888888889px; max-height:  533.8888888888889px; }
+.size-large .duration_9800 { min-height: 539.4444444444445px; max-height:  539.4444444444445px; }
+.size-large .duration_9900 { min-height: 545.0px; max-height:  545.0px; }
+.size-large .duration_10000 { min-height: 550.5555555555555px; max-height:  550.5555555555555px; }
+.size-large .duration_10100 { min-height: 556.1111111111111px; max-height:  556.1111111111111px; }
+.size-large .duration_10200 { min-height: 561.6666666666666px; max-height:  561.6666666666666px; }
+.size-large .duration_10300 { min-height: 567.2222222222222px; max-height:  567.2222222222222px; }
+.size-large .duration_10400 { min-height: 572.7777777777778px; max-height:  572.7777777777778px; }
+.size-large .duration_10500 { min-height: 578.3333333333334px; max-height:  578.3333333333334px; }
+.size-large .duration_10600 { min-height: 583.8888888888889px; max-height:  583.8888888888889px; }
+.size-large .duration_10700 { min-height: 589.4444444444445px; max-height:  589.4444444444445px; }
+.size-large .duration_10800 { min-height: 595.0px; max-height:  595.0px; }
+.size-large .duration_10900 { min-height: 600.5555555555555px; max-height:  600.5555555555555px; }
+.size-large .duration_11000 { min-height: 606.1111111111111px; max-height:  606.1111111111111px; }
+.size-large .duration_11100 { min-height: 611.6666666666666px; max-height:  611.6666666666666px; }
+.size-large .duration_11200 { min-height: 617.2222222222222px; max-height:  617.2222222222222px; }
+.size-large .duration_11300 { min-height: 622.7777777777778px; max-height:  622.7777777777778px; }
+.size-large .duration_11400 { min-height: 628.3333333333334px; max-height:  628.3333333333334px; }
+.size-large .duration_11500 { min-height: 633.8888888888889px; max-height:  633.8888888888889px; }
+.size-large .duration_11600 { min-height: 639.4444444444445px; max-height:  639.4444444444445px; }
+.size-large .duration_11700 { min-height: 645.0px; max-height:  645.0px; }
+.size-large .duration_11800 { min-height: 650.5555555555555px; max-height:  650.5555555555555px; }
+.size-large .duration_11900 { min-height: 656.1111111111111px; max-height:  656.1111111111111px; }
+.size-large .wholeblock     { height: 733.3333333333334px; }
+.size-medium .duration_300 { min-height: 7.0px; max-height:  7.0px; }
+.size-medium .duration_400 { min-height: 10.333333333333334px; max-height:  10.333333333333334px; }
+.size-medium .duration_500 { min-height: 13.666666666666668px; max-height:  13.666666666666668px; }
+.size-medium .duration_600 { min-height: 17.0px; max-height:  17.0px; }
+.size-medium .duration_700 { min-height: 20.333333333333332px; max-height:  20.333333333333332px; }
+.size-medium .duration_800 { min-height: 23.666666666666668px; max-height:  23.666666666666668px; }
+.size-medium .duration_900 { min-height: 27.0px; max-height:  27.0px; }
+.size-medium .duration_1000 { min-height: 30.333333333333336px; max-height:  30.333333333333336px; }
+.size-medium .duration_1100 { min-height: 33.666666666666664px; max-height:  33.666666666666664px; }
+.size-medium .duration_1200 { min-height: 37.0px; max-height:  37.0px; }
+.size-medium .duration_1300 { min-height: 40.333333333333336px; max-height:  40.333333333333336px; }
+.size-medium .duration_1400 { min-height: 43.666666666666664px; max-height:  43.666666666666664px; }
+.size-medium .duration_1500 { min-height: 47.0px; max-height:  47.0px; }
+.size-medium .duration_1600 { min-height: 50.333333333333336px; max-height:  50.333333333333336px; }
+.size-medium .duration_1700 { min-height: 53.666666666666664px; max-height:  53.666666666666664px; }
+.size-medium .duration_1800 { min-height: 57.0px; max-height:  57.0px; }
+.size-medium .duration_1900 { min-height: 60.333333333333336px; max-height:  60.333333333333336px; }
+.size-medium .duration_2000 { min-height: 63.66666666666667px; max-height:  63.66666666666667px; }
+.size-medium .duration_2100 { min-height: 67.0px; max-height:  67.0px; }
+.size-medium .duration_2200 { min-height: 70.33333333333333px; max-height:  70.33333333333333px; }
+.size-medium .duration_2300 { min-height: 73.66666666666667px; max-height:  73.66666666666667px; }
+.size-medium .duration_2400 { min-height: 77.0px; max-height:  77.0px; }
+.size-medium .duration_2500 { min-height: 80.33333333333333px; max-height:  80.33333333333333px; }
+.size-medium .duration_2600 { min-height: 83.66666666666667px; max-height:  83.66666666666667px; }
+.size-medium .duration_2700 { min-height: 87.0px; max-height:  87.0px; }
+.size-medium .duration_2800 { min-height: 90.33333333333333px; max-height:  90.33333333333333px; }
+.size-medium .duration_2900 { min-height: 93.66666666666667px; max-height:  93.66666666666667px; }
+.size-medium .duration_3000 { min-height: 97.0px; max-height:  97.0px; }
+.size-medium .duration_3100 { min-height: 100.33333333333333px; max-height:  100.33333333333333px; }
+.size-medium .duration_3200 { min-height: 103.66666666666667px; max-height:  103.66666666666667px; }
+.size-medium .duration_3300 { min-height: 107.0px; max-height:  107.0px; }
+.size-medium .duration_3400 { min-height: 110.33333333333333px; max-height:  110.33333333333333px; }
+.size-medium .duration_3500 { min-height: 113.66666666666667px; max-height:  113.66666666666667px; }
+.size-medium .duration_3600 { min-height: 117.0px; max-height:  117.0px; }
+.size-medium .duration_3700 { min-height: 120.33333333333333px; max-height:  120.33333333333333px; }
+.size-medium .duration_3800 { min-height: 123.66666666666667px; max-height:  123.66666666666667px; }
+.size-medium .duration_3900 { min-height: 127.0px; max-height:  127.0px; }
+.size-medium .duration_4000 { min-height: 130.33333333333334px; max-height:  130.33333333333334px; }
+.size-medium .duration_4100 { min-height: 133.66666666666666px; max-height:  133.66666666666666px; }
+.size-medium .duration_4200 { min-height: 137.0px; max-height:  137.0px; }
+.size-medium .duration_4300 { min-height: 140.33333333333334px; max-height:  140.33333333333334px; }
+.size-medium .duration_4400 { min-height: 143.66666666666666px; max-height:  143.66666666666666px; }
+.size-medium .duration_4500 { min-height: 147.0px; max-height:  147.0px; }
+.size-medium .duration_4600 { min-height: 150.33333333333334px; max-height:  150.33333333333334px; }
+.size-medium .duration_4700 { min-height: 153.66666666666666px; max-height:  153.66666666666666px; }
+.size-medium .duration_4800 { min-height: 157.0px; max-height:  157.0px; }
+.size-medium .duration_4900 { min-height: 160.33333333333334px; max-height:  160.33333333333334px; }
+.size-medium .duration_5000 { min-height: 163.66666666666666px; max-height:  163.66666666666666px; }
+.size-medium .duration_5100 { min-height: 167.0px; max-height:  167.0px; }
+.size-medium .duration_5200 { min-height: 170.33333333333334px; max-height:  170.33333333333334px; }
+.size-medium .duration_5300 { min-height: 173.66666666666666px; max-height:  173.66666666666666px; }
+.size-medium .duration_5400 { min-height: 177.0px; max-height:  177.0px; }
+.size-medium .duration_5500 { min-height: 180.33333333333334px; max-height:  180.33333333333334px; }
+.size-medium .duration_5600 { min-height: 183.66666666666666px; max-height:  183.66666666666666px; }
+.size-medium .duration_5700 { min-height: 187.0px; max-height:  187.0px; }
+.size-medium .duration_5800 { min-height: 190.33333333333334px; max-height:  190.33333333333334px; }
+.size-medium .duration_5900 { min-height: 193.66666666666666px; max-height:  193.66666666666666px; }
+.size-medium .duration_6000 { min-height: 197.0px; max-height:  197.0px; }
+.size-medium .duration_6100 { min-height: 200.33333333333334px; max-height:  200.33333333333334px; }
+.size-medium .duration_6200 { min-height: 203.66666666666666px; max-height:  203.66666666666666px; }
+.size-medium .duration_6300 { min-height: 207.0px; max-height:  207.0px; }
+.size-medium .duration_6400 { min-height: 210.33333333333334px; max-height:  210.33333333333334px; }
+.size-medium .duration_6500 { min-height: 213.66666666666666px; max-height:  213.66666666666666px; }
+.size-medium .duration_6600 { min-height: 217.0px; max-height:  217.0px; }
+.size-medium .duration_6700 { min-height: 220.33333333333334px; max-height:  220.33333333333334px; }
+.size-medium .duration_6800 { min-height: 223.66666666666666px; max-height:  223.66666666666666px; }
+.size-medium .duration_6900 { min-height: 227.0px; max-height:  227.0px; }
+.size-medium .duration_7000 { min-height: 230.33333333333334px; max-height:  230.33333333333334px; }
+.size-medium .duration_7100 { min-height: 233.66666666666666px; max-height:  233.66666666666666px; }
+.size-medium .duration_7200 { min-height: 237.0px; max-height:  237.0px; }
+.size-medium .duration_7300 { min-height: 240.33333333333334px; max-height:  240.33333333333334px; }
+.size-medium .duration_7400 { min-height: 243.66666666666666px; max-height:  243.66666666666666px; }
+.size-medium .duration_7500 { min-height: 247.0px; max-height:  247.0px; }
+.size-medium .duration_7600 { min-height: 250.33333333333334px; max-height:  250.33333333333334px; }
+.size-medium .duration_7700 { min-height: 253.66666666666669px; max-height:  253.66666666666669px; }
+.size-medium .duration_7800 { min-height: 257.0px; max-height:  257.0px; }
+.size-medium .duration_7900 { min-height: 260.3333333333333px; max-height:  260.3333333333333px; }
+.size-medium .duration_8000 { min-height: 263.6666666666667px; max-height:  263.6666666666667px; }
+.size-medium .duration_8100 { min-height: 267.0px; max-height:  267.0px; }
+.size-medium .duration_8200 { min-height: 270.3333333333333px; max-height:  270.3333333333333px; }
+.size-medium .duration_8300 { min-height: 273.6666666666667px; max-height:  273.6666666666667px; }
+.size-medium .duration_8400 { min-height: 277.0px; max-height:  277.0px; }
+.size-medium .duration_8500 { min-height: 280.3333333333333px; max-height:  280.3333333333333px; }
+.size-medium .duration_8600 { min-height: 283.6666666666667px; max-height:  283.6666666666667px; }
+.size-medium .duration_8700 { min-height: 287.0px; max-height:  287.0px; }
+.size-medium .duration_8800 { min-height: 290.3333333333333px; max-height:  290.3333333333333px; }
+.size-medium .duration_8900 { min-height: 293.6666666666667px; max-height:  293.6666666666667px; }
+.size-medium .duration_9000 { min-height: 297.0px; max-height:  297.0px; }
+.size-medium .duration_9100 { min-height: 300.3333333333333px; max-height:  300.3333333333333px; }
+.size-medium .duration_9200 { min-height: 303.6666666666667px; max-height:  303.6666666666667px; }
+.size-medium .duration_9300 { min-height: 307.0px; max-height:  307.0px; }
+.size-medium .duration_9400 { min-height: 310.3333333333333px; max-height:  310.3333333333333px; }
+.size-medium .duration_9500 { min-height: 313.6666666666667px; max-height:  313.6666666666667px; }
+.size-medium .duration_9600 { min-height: 317.0px; max-height:  317.0px; }
+.size-medium .duration_9700 { min-height: 320.3333333333333px; max-height:  320.3333333333333px; }
+.size-medium .duration_9800 { min-height: 323.6666666666667px; max-height:  323.6666666666667px; }
+.size-medium .duration_9900 { min-height: 327.0px; max-height:  327.0px; }
+.size-medium .duration_10000 { min-height: 330.3333333333333px; max-height:  330.3333333333333px; }
+.size-medium .duration_10100 { min-height: 333.6666666666667px; max-height:  333.6666666666667px; }
+.size-medium .duration_10200 { min-height: 337.0px; max-height:  337.0px; }
+.size-medium .duration_10300 { min-height: 340.3333333333333px; max-height:  340.3333333333333px; }
+.size-medium .duration_10400 { min-height: 343.6666666666667px; max-height:  343.6666666666667px; }
+.size-medium .duration_10500 { min-height: 347.0px; max-height:  347.0px; }
+.size-medium .duration_10600 { min-height: 350.3333333333333px; max-height:  350.3333333333333px; }
+.size-medium .duration_10700 { min-height: 353.6666666666667px; max-height:  353.6666666666667px; }
+.size-medium .duration_10800 { min-height: 357.0px; max-height:  357.0px; }
+.size-medium .duration_10900 { min-height: 360.3333333333333px; max-height:  360.3333333333333px; }
+.size-medium .duration_11000 { min-height: 363.6666666666667px; max-height:  363.6666666666667px; }
+.size-medium .duration_11100 { min-height: 367.0px; max-height:  367.0px; }
+.size-medium .duration_11200 { min-height: 370.3333333333333px; max-height:  370.3333333333333px; }
+.size-medium .duration_11300 { min-height: 373.6666666666667px; max-height:  373.6666666666667px; }
+.size-medium .duration_11400 { min-height: 377.0px; max-height:  377.0px; }
+.size-medium .duration_11500 { min-height: 380.3333333333333px; max-height:  380.3333333333333px; }
+.size-medium .duration_11600 { min-height: 383.6666666666667px; max-height:  383.6666666666667px; }
+.size-medium .duration_11700 { min-height: 387.0px; max-height:  387.0px; }
+.size-medium .duration_11800 { min-height: 390.3333333333333px; max-height:  390.3333333333333px; }
+.size-medium .duration_11900 { min-height: 393.6666666666667px; max-height:  393.6666666666667px; }
+.size-medium .wholeblock     { height: 440.0px; }
+.size-small .duration_300 { min-height: 4.666666666666667px; max-height:  4.666666666666667px; }
+.size-small .duration_400 { min-height: 6.888888888888889px; max-height:  6.888888888888889px; }
+.size-small .duration_500 { min-height: 9.11111111111111px; max-height:  9.11111111111111px; }
+.size-small .duration_600 { min-height: 11.333333333333334px; max-height:  11.333333333333334px; }
+.size-small .duration_700 { min-height: 13.555555555555555px; max-height:  13.555555555555555px; }
+.size-small .duration_800 { min-height: 15.777777777777779px; max-height:  15.777777777777779px; }
+.size-small .duration_900 { min-height: 18.0px; max-height:  18.0px; }
+.size-small .duration_1000 { min-height: 20.22222222222222px; max-height:  20.22222222222222px; }
+.size-small .duration_1100 { min-height: 22.444444444444443px; max-height:  22.444444444444443px; }
+.size-small .duration_1200 { min-height: 24.666666666666668px; max-height:  24.666666666666668px; }
+.size-small .duration_1300 { min-height: 26.88888888888889px; max-height:  26.88888888888889px; }
+.size-small .duration_1400 { min-height: 29.11111111111111px; max-height:  29.11111111111111px; }
+.size-small .duration_1500 { min-height: 31.333333333333336px; max-height:  31.333333333333336px; }
+.size-small .duration_1600 { min-height: 33.55555555555556px; max-height:  33.55555555555556px; }
+.size-small .duration_1700 { min-height: 35.77777777777778px; max-height:  35.77777777777778px; }
+.size-small .duration_1800 { min-height: 38.0px; max-height:  38.0px; }
+.size-small .duration_1900 { min-height: 40.22222222222222px; max-height:  40.22222222222222px; }
+.size-small .duration_2000 { min-height: 42.44444444444444px; max-height:  42.44444444444444px; }
+.size-small .duration_2100 { min-height: 44.666666666666664px; max-height:  44.666666666666664px; }
+.size-small .duration_2200 { min-height: 46.888888888888886px; max-height:  46.888888888888886px; }
+.size-small .duration_2300 { min-height: 49.111111111111114px; max-height:  49.111111111111114px; }
+.size-small .duration_2400 { min-height: 51.333333333333336px; max-height:  51.333333333333336px; }
+.size-small .duration_2500 { min-height: 53.55555555555556px; max-height:  53.55555555555556px; }
+.size-small .duration_2600 { min-height: 55.77777777777778px; max-height:  55.77777777777778px; }
+.size-small .duration_2700 { min-height: 58.0px; max-height:  58.0px; }
+.size-small .duration_2800 { min-height: 60.22222222222222px; max-height:  60.22222222222222px; }
+.size-small .duration_2900 { min-height: 62.44444444444444px; max-height:  62.44444444444444px; }
+.size-small .duration_3000 { min-height: 64.66666666666667px; max-height:  64.66666666666667px; }
+.size-small .duration_3100 { min-height: 66.88888888888889px; max-height:  66.88888888888889px; }
+.size-small .duration_3200 { min-height: 69.11111111111111px; max-height:  69.11111111111111px; }
+.size-small .duration_3300 { min-height: 71.33333333333333px; max-height:  71.33333333333333px; }
+.size-small .duration_3400 { min-height: 73.55555555555556px; max-height:  73.55555555555556px; }
+.size-small .duration_3500 { min-height: 75.77777777777777px; max-height:  75.77777777777777px; }
+.size-small .duration_3600 { min-height: 78.0px; max-height:  78.0px; }
+.size-small .duration_3700 { min-height: 80.22222222222223px; max-height:  80.22222222222223px; }
+.size-small .duration_3800 { min-height: 82.44444444444444px; max-height:  82.44444444444444px; }
+.size-small .duration_3900 { min-height: 84.66666666666667px; max-height:  84.66666666666667px; }
+.size-small .duration_4000 { min-height: 86.88888888888889px; max-height:  86.88888888888889px; }
+.size-small .duration_4100 { min-height: 89.11111111111111px; max-height:  89.11111111111111px; }
+.size-small .duration_4200 { min-height: 91.33333333333333px; max-height:  91.33333333333333px; }
+.size-small .duration_4300 { min-height: 93.55555555555556px; max-height:  93.55555555555556px; }
+.size-small .duration_4400 { min-height: 95.77777777777777px; max-height:  95.77777777777777px; }
+.size-small .duration_4500 { min-height: 98.0px; max-height:  98.0px; }
+.size-small .duration_4600 { min-height: 100.22222222222223px; max-height:  100.22222222222223px; }
+.size-small .duration_4700 { min-height: 102.44444444444444px; max-height:  102.44444444444444px; }
+.size-small .duration_4800 { min-height: 104.66666666666667px; max-height:  104.66666666666667px; }
+.size-small .duration_4900 { min-height: 106.88888888888889px; max-height:  106.88888888888889px; }
+.size-small .duration_5000 { min-height: 109.11111111111111px; max-height:  109.11111111111111px; }
+.size-small .duration_5100 { min-height: 111.33333333333333px; max-height:  111.33333333333333px; }
+.size-small .duration_5200 { min-height: 113.55555555555556px; max-height:  113.55555555555556px; }
+.size-small .duration_5300 { min-height: 115.77777777777777px; max-height:  115.77777777777777px; }
+.size-small .duration_5400 { min-height: 118.0px; max-height:  118.0px; }
+.size-small .duration_5500 { min-height: 120.22222222222223px; max-height:  120.22222222222223px; }
+.size-small .duration_5600 { min-height: 122.44444444444444px; max-height:  122.44444444444444px; }
+.size-small .duration_5700 { min-height: 124.66666666666667px; max-height:  124.66666666666667px; }
+.size-small .duration_5800 { min-height: 126.88888888888889px; max-height:  126.88888888888889px; }
+.size-small .duration_5900 { min-height: 129.11111111111111px; max-height:  129.11111111111111px; }
+.size-small .duration_6000 { min-height: 131.33333333333334px; max-height:  131.33333333333334px; }
+.size-small .duration_6100 { min-height: 133.55555555555554px; max-height:  133.55555555555554px; }
+.size-small .duration_6200 { min-height: 135.77777777777777px; max-height:  135.77777777777777px; }
+.size-small .duration_6300 { min-height: 138.0px; max-height:  138.0px; }
+.size-small .duration_6400 { min-height: 140.22222222222223px; max-height:  140.22222222222223px; }
+.size-small .duration_6500 { min-height: 142.44444444444446px; max-height:  142.44444444444446px; }
+.size-small .duration_6600 { min-height: 144.66666666666666px; max-height:  144.66666666666666px; }
+.size-small .duration_6700 { min-height: 146.88888888888889px; max-height:  146.88888888888889px; }
+.size-small .duration_6800 { min-height: 149.11111111111111px; max-height:  149.11111111111111px; }
+.size-small .duration_6900 { min-height: 151.33333333333334px; max-height:  151.33333333333334px; }
+.size-small .duration_7000 { min-height: 153.55555555555554px; max-height:  153.55555555555554px; }
+.size-small .duration_7100 { min-height: 155.77777777777777px; max-height:  155.77777777777777px; }
+.size-small .duration_7200 { min-height: 158.0px; max-height:  158.0px; }
+.size-small .duration_7300 { min-height: 160.22222222222223px; max-height:  160.22222222222223px; }
+.size-small .duration_7400 { min-height: 162.44444444444446px; max-height:  162.44444444444446px; }
+.size-small .duration_7500 { min-height: 164.66666666666666px; max-height:  164.66666666666666px; }
+.size-small .duration_7600 { min-height: 166.88888888888889px; max-height:  166.88888888888889px; }
+.size-small .duration_7700 { min-height: 169.11111111111111px; max-height:  169.11111111111111px; }
+.size-small .duration_7800 { min-height: 171.33333333333334px; max-height:  171.33333333333334px; }
+.size-small .duration_7900 { min-height: 173.55555555555554px; max-height:  173.55555555555554px; }
+.size-small .duration_8000 { min-height: 175.77777777777777px; max-height:  175.77777777777777px; }
+.size-small .duration_8100 { min-height: 178.0px; max-height:  178.0px; }
+.size-small .duration_8200 { min-height: 180.22222222222223px; max-height:  180.22222222222223px; }
+.size-small .duration_8300 { min-height: 182.44444444444446px; max-height:  182.44444444444446px; }
+.size-small .duration_8400 { min-height: 184.66666666666666px; max-height:  184.66666666666666px; }
+.size-small .duration_8500 { min-height: 186.88888888888889px; max-height:  186.88888888888889px; }
+.size-small .duration_8600 { min-height: 189.11111111111111px; max-height:  189.11111111111111px; }
+.size-small .duration_8700 { min-height: 191.33333333333334px; max-height:  191.33333333333334px; }
+.size-small .duration_8800 { min-height: 193.55555555555554px; max-height:  193.55555555555554px; }
+.size-small .duration_8900 { min-height: 195.77777777777777px; max-height:  195.77777777777777px; }
+.size-small .duration_9000 { min-height: 198.0px; max-height:  198.0px; }
+.size-small .duration_9100 { min-height: 200.22222222222223px; max-height:  200.22222222222223px; }
+.size-small .duration_9200 { min-height: 202.44444444444446px; max-height:  202.44444444444446px; }
+.size-small .duration_9300 { min-height: 204.66666666666666px; max-height:  204.66666666666666px; }
+.size-small .duration_9400 { min-height: 206.88888888888889px; max-height:  206.88888888888889px; }
+.size-small .duration_9500 { min-height: 209.11111111111111px; max-height:  209.11111111111111px; }
+.size-small .duration_9600 { min-height: 211.33333333333334px; max-height:  211.33333333333334px; }
+.size-small .duration_9700 { min-height: 213.55555555555554px; max-height:  213.55555555555554px; }
+.size-small .duration_9800 { min-height: 215.77777777777777px; max-height:  215.77777777777777px; }
+.size-small .duration_9900 { min-height: 218.0px; max-height:  218.0px; }
+.size-small .duration_10000 { min-height: 220.22222222222223px; max-height:  220.22222222222223px; }
+.size-small .duration_10100 { min-height: 222.44444444444446px; max-height:  222.44444444444446px; }
+.size-small .duration_10200 { min-height: 224.66666666666666px; max-height:  224.66666666666666px; }
+.size-small .duration_10300 { min-height: 226.88888888888889px; max-height:  226.88888888888889px; }
+.size-small .duration_10400 { min-height: 229.11111111111111px; max-height:  229.11111111111111px; }
+.size-small .duration_10500 { min-height: 231.33333333333334px; max-height:  231.33333333333334px; }
+.size-small .duration_10600 { min-height: 233.55555555555554px; max-height:  233.55555555555554px; }
+.size-small .duration_10700 { min-height: 235.77777777777777px; max-height:  235.77777777777777px; }
+.size-small .duration_10800 { min-height: 238.0px; max-height:  238.0px; }
+.size-small .duration_10900 { min-height: 240.22222222222223px; max-height:  240.22222222222223px; }
+.size-small .duration_11000 { min-height: 242.44444444444446px; max-height:  242.44444444444446px; }
+.size-small .duration_11100 { min-height: 244.66666666666666px; max-height:  244.66666666666666px; }
+.size-small .duration_11200 { min-height: 246.88888888888889px; max-height:  246.88888888888889px; }
+.size-small .duration_11300 { min-height: 249.11111111111111px; max-height:  249.11111111111111px; }
+.size-small .duration_11400 { min-height: 251.33333333333334px; max-height:  251.33333333333334px; }
+.size-small .duration_11500 { min-height: 253.55555555555554px; max-height:  253.55555555555554px; }
+.size-small .duration_11600 { min-height: 255.77777777777777px; max-height:  255.77777777777777px; }
+.size-small .duration_11700 { min-height: 258.0px; max-height:  258.0px; }
+.size-small .duration_11800 { min-height: 260.22222222222223px; max-height:  260.22222222222223px; }
+.size-small .duration_11900 { min-height: 262.44444444444446px; max-height:  262.44444444444446px; }
+.size-small .wholeblock     { height: 293.3333333333333px; }
+.size-large .grid           { height: 33.333333333333336px; font-size: 1em; }
+.size-medium .grid          { height: 20.0px; font-size: 0.5em; }
+.size-small .grid           { height: 13.333333333333334px; font-size: 0.3em; }
+.in-calendar .room1 { left:  4.0%; }
+.in-calendar .room2 { left:  23.2%; }
+.in-calendar .room3 { left:  42.4%; }
+.in-calendar .room4 { left:  61.599999999999994%; }
+.in-calendar .room5 { left:  80.8%; }
+.in-calendar .event, .in-calendar .room-label, .in-calendar .grid { position: absolute; width: 15.2%; }
+.in-calendar .r, .in-calendar .l { width: 15.2%; }
+.in-calendar .rr, .in-calendar .ll { width: 34.4%; }
+.in-calendar .rrr, .in-calendar .lll { width: 53.599999999999994%; }
+.in-calendar .rrrr, .in-calendar .llll { width: 72.8%; }
+.in-calendar .r, .in-calendar .rr, .in-calendar .rrr, .in-calendar .rrrr { margin-left: 7.6% ; }
+.in-calendar .l { margin-left: -7.6% ; }
+.in-calendar .ll { margin-left: -26.799999999999997% ; }
+.in-calendar .lll { margin-left: -46.0% ; }
+.in-calendar .llll { margin-left: -65.19999999999999% ; }
+.in-calendar.alldays .day_1.room1 { left:  0.5%; }
+.in-calendar.alldays .day_1.room2 { left:  5.475%; }
+.in-calendar.alldays .day_1.room3 { left:  10.45%; }
+.in-calendar.alldays .day_1.room4 { left:  15.424999999999999%; }
+.in-calendar.alldays .day_1.room5 { left:  20.4%; }
+.in-calendar.alldays .day_2.room1 { left:  25.375%; }
+.in-calendar.alldays .day_2.room2 { left:  30.349999999999998%; }
+.in-calendar.alldays .day_2.room3 { left:  35.324999999999996%; }
+.in-calendar.alldays .day_2.room4 { left:  40.3%; }
+.in-calendar.alldays .day_2.room5 { left:  45.275%; }
+.in-calendar.alldays .day_3.room1 { left:  50.25%; }
+.in-calendar.alldays .day_3.room2 { left:  55.224999999999994%; }
+.in-calendar.alldays .day_3.room3 { left:  60.199999999999996%; }
+.in-calendar.alldays .day_3.room4 { left:  65.175%; }
+.in-calendar.alldays .day_3.room5 { left:  70.14999999999999%; }
+.in-calendar.alldays .day_4.room1 { left:  75.125%; }
+.in-calendar.alldays .day_4.room2 { left:  80.1%; }
+.in-calendar.alldays .day_4.room3 { left:  85.07499999999999%; }
+.in-calendar.alldays .day_4.room4 { left:  90.05%; }
+.in-calendar.alldays .day_4.room5 { left:  95.02499999999999%; }
+.wholeday, .wholeblock { width: 25.0% }
+.in-calendar.alldays .event, .in-calendar.alldays .room-label, .in-calendar.alldays .grid { width: 4.475%; }
+.in-calendar.alldays .r, .in-calendar.alldays .l { width: 4.475%; }
+.in-calendar.alldays .rr, .in-calendar.alldays .ll { width: 9.45%; }
+.in-calendar.alldays .rrr, .in-calendar.alldays .lll { width: 14.424999999999999%; }
+.in-calendar.alldays .rrrr, .in-calendar.alldays .llll { width: 19.4%; }
+.in-calendar.alldays .r, .in-calendar.alldays .rr, .in-calendar.alldays .rrr, .in-calendar.alldays .rrrr { margin-left: 2.2375% ; }
+.in-calendar.alldays .l { margin-left: -2.2375% ; }
+.in-calendar.alldays .ll { margin-left: -7.2124999999999995% ; }
+.in-calendar.alldays .lll { margin-left: -12.1875% ; }
+.in-calendar.alldays .llll { margin-left: -17.162499999999998% ; }
+.r, .rr, .rrr, .rrrr, .l, .ll, .lll, .llll { height: 4px; }
+.size-large .wholeday       { height: 3400px; }
+.size-large .duration_inf   { height: 1400px; }
+.size-medium .wholeday       { height: 2040px; }
+.size-medium .duration_inf   { height: 840px; }
+.size-small .wholeday       { height: 1360px; }
+.size-small .duration_inf   { height: 560px; }

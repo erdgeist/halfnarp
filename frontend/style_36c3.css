@@ -1,0 +1,948 @@
+body {
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal;
+    padding-bottom: 12rem;
+    height: 1px;
+}
+
+body:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 12rem;
+}
+
+div, p, a, li, td { -webkit-text-size-adjust:none; }
+
+body,
+header {
+    min-width: 640px;
+}
+
+.narpr {
+    position: fixed;
+    top: 3em;
+    bottom: 9rem;
+    left: 3em;
+    border: 4px solid black;
+    background: white;
+    width: 88%;
+    padding: 1em;
+    min-height: 50em;
+    border-radius: 10px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+}
+.narpr_swpipy.large {
+  font-size: 20em;
+}
+.narpr_swipy {
+  background: linear-gradient(to right, #0084B0 00%, #00A356 100% );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-variant: small-caps;
+  font-size: 4em;
+  position: relative;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.narpr-beta {
+    display: inline-block;
+    float: right;
+    width: 4em;
+    background: linear-gradient(to right, #0084B0 -100%, #00A356 200% );
+    border: 2px black solid;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    padding-top: 1.0em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: white !important;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.narpr_done {
+    float: right;
+    bottom: 0px;
+    margin-top: 1em;
+    padding: 0.2em;
+    font-size: 3em;
+    background: linear-gradient(to right, #0084B0 -100%, #00A356 200% );
+    border: 2px black solid;
+    font-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.narpr_done:hover {
+    background: black;
+    color: white;
+}
+
+.narpr_track {
+    color: grey;
+    font-size: 3em;
+    font-variant: small-caps;
+    margin-top: 1em;
+}
+
+.narpr_title {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.narpr_subtitle {
+    font-size: 3em;
+}
+.narpr_speakers {
+    font-size: 3em;
+    font-style: italic;
+    padding: 0.2em 0.2em 0.2em 0.4em;
+    margin-bottom: 1em;
+}
+.narpr_abstract {
+    font-size: 2em;
+}
+
+.intro {
+    float: left;
+    font-size: 1em;
+    max-width: 50%;
+    width: auto;
+    padding-left: 0.5em;
+}
+
+.track-list {
+    padding-top: 1em;
+    float: right;
+    max-width: 40%;
+    width: auto;
+    text-align: right;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+.footer,
+.track-list {
+    font-size: 0.8em;
+}
+}
+
+.headline {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.rightbox {
+    float: right;
+    max-width: 50%;
+}
+
+.leftbox {
+    float: left;
+    max-width: 100%;
+}
+
+.submit {
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    height: 1em;
+    background: green; color: white;
+
+    padding: 1em;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.submit svg{
+    fill :#fff;
+    float: right;
+    height: 1em;
+    margin-left: 1em;
+}
+
+.export-url,
+.info {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+
+    height: 1em;
+    background: lightblue;
+
+    margin: 1rem 0.5rem 1rem;
+    border-radius: 5px;
+    padding: 1em;
+    float: right;
+}
+
+.submit:hover {
+    background: #000;
+    transition: background 0.5s;
+}
+
+#filter {
+    font-size: 1em;
+    border-radius: 5px;
+    line-height: 1em;
+    height: 1em;
+    padding: 0.8em;
+    margin: 1em;
+    min-width: 250px;
+}
+
+.clear {
+    clear: both;
+}
+
+.explainer {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 80em;
+    text-align: center;
+}
+
+.explainer ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    height: 8em;
+    overflow: hidden;
+}
+
+.boxer {
+    font-size: 1em;
+    float: left;
+    width: 2em;
+    height: 2em;
+    background: grey;
+    color: white;
+    text-align: center;
+    margin-right: 0.2em;
+    padding: 0.2em 0 0 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.allboxes {
+    clear: left;
+}
+
+.vmediumboxes {
+    width: 3em;
+    height: 3em;
+}
+
+.vlargeboxes {
+    width: 4em;
+    height: 4em;
+}
+
+.inline-button {
+    display: block;
+    background: grey;
+    margin-right: 0.2em;
+    padding: 2em 0 0 0;
+    text-align: center;
+    color: white;
+    width: 5em;
+    height: 3em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.views {
+    display: inline-block;
+    background: grey;
+    margin-right: 0.2em;
+    padding: 0.2em 0 0 0;
+    text-align: center;
+    color: white;
+    width: 3em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.inline-button:hover,
+.views:hover,
+.boxer:hover {
+    background: #eee;
+}
+
+.track h2 {
+    text-align: center;
+
+    border-bottom: 0.3em solid #4588ba;
+
+    margin: 2em 0 1em 0;
+    clear: both;
+}
+
+.version {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+.trashbin {
+    position: absolute;
+    top 4px;
+    left: 4px;
+    text-align: center;
+    border: 1px silver dotted;
+    border-radius: 0.2em;
+    background: #ddd;
+    padding: 1em;
+}
+.in-list .trashbin {
+    visibility: hidden;
+    display: none;
+}
+.trashbin.over {
+    background: red;
+}
+
+/* Our main event box */
+.event {
+    overflow: hidden;
+
+    background: #eee;
+    border-radius: 5px;
+
+    margin: 0 0.8em 0.8em 0;
+    cursor: pointer;
+}
+
+.event .speakers,
+.event .abstract {
+    font-size: 0.8em;
+}
+
+/* If tagged as in-list, display and stack them to the left */
+.in-list .event {
+    display: inline-block;
+    visibility: visible;
+    float: left;
+}
+
+.in-list .event:hover {
+    position: relative;
+    top: auto !important;
+}
+
+.event.selected {
+    background: green;
+}
+
+/* Outer glow for selected events in other display modes */
+.languages .event.selected,
+.all-tracks .event.selected,
+.correlate .event.selected {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
+    box-shadow: 0px 0px 20px 5px rgba(0,255,0,1);
+}
+
+.foundation:before {
+  float: right;
+  content: ' ';
+  border: 0.8em red solid;
+  border-bottom-left-radius: 2em; margin-top: 0; margin-left: 0;
+  width:  0;
+  height: 0;
+  color: red;
+  background-color: red;
+}
+
+.selected.friend {
+    background-image:
+        repeating-linear-gradient(
+          45deg,
+          purple,
+          purple 20px,
+          green 20px,
+          green 40px /* determines size */
+        ) !important;
+        color: white;
+}
+.friend {
+    background: purple;
+    color: white;
+}
+
+.in-calendar .room-label {
+    font-size: 2em;
+}
+
+.in-calendar.alldays .room-label {
+    font-size: 1em;
+}
+
+/* Events in calendar view are only visible if the have a date */
+.in-calendar.alldays .event.day_1, .in-calendar.onlyday1 .event.day_1,
+.in-calendar.alldays .event.day_2, .in-calendar.onlyday2 .event.day_2,
+.in-calendar.alldays .event.day_3, .in-calendar.onlyday3 .event.day_3,
+.in-calendar.alldays .event.day_4, .in-calendar.onlyday4 .event.day_4 {
+    display: block;
+    visibility: visible;
+}
+
+/* span a grid */
+.grid {
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.grid.possible {
+    background: blue;
+}
+
+.wholeday {
+    position: absolute;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2em;
+    top: 350px;
+    opacity: 0.3;
+    z-position: -3;
+}
+.wholeday.uneven {
+    background-color: cyan;
+}
+
+.wholeblock {
+    position: absolute;
+    background-color: yellow;
+    opacity: 0.4;
+    z-position: -3;
+}
+.in-calendar.onlyday1 .wholeblock,
+.in-calendar.onlyday2 .wholeblock,
+.in-calendar.onlyday3 .wholeblock,
+.in-calendar.onlyday4 .wholeblock
+{
+    width: 100%;
+}
+
+.grid.over {
+    background-color: lime;
+}
+
+.room-label {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    top: 350px;
+}
+
+.views.vday4 {
+    margin-right: 3em;
+}
+
+.guide {
+    position: absolute;
+    z-index: -1;
+    font-weight: bold;
+}
+
+hr.guide {
+    left: 4%;
+    width: 95%;
+}
+
+.ende, .pause {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-position: -1;
+}
+
+.size-large .pause {
+    font-size: 9em;
+}
+
+.size-medium .pause {
+    font-size: 7em;
+}
+
+.size-small .pause {
+    font-size: 4em;
+}
+
+/* togglable view selectors */
+.absolute             .vhalf        { background: red; }
+.correlate            .vcorr        { background: red; }
+.still-left           .vleft        { background: red; }
+.languages            .vlang        { background: red; }
+.showcorrweb          .vweb         { background: red; }
+.all-tracks           .vtrack       { background: red; }
+.in-list              .vlist        { background: red; }
+.size-large           .vlargeboxes  { background: red; }
+.size-medium          .vmediumboxes { background: red; }
+.size-small           .vsmallboxes  { background: red; }
+.in-calendar.alldays  .vdays        { background: red; }
+.in-calendar.onlyday1 .vday1        { background: red; }
+.in-calendar.onlyday2 .vday2        { background: red; }
+.in-calendar.onlyday3 .vday3        { background: red; }
+.in-calendar.onlyday4 .vday4        { background: red; }
+
+/* Rule for when stuff is hidden */
+.in-list .guide,
+.in-list .grid,
+.in-list .room-label,
+.in-calendar .track h2,
+.in-calendar .event:not(.day_1):not(.day_2):not(.day_3):not(.day_4),
+.in-list .corr-warn,
+.in-list.still-left .day_1,
+.in-list.still-left .day_2,
+.in-list.still-left .day_3,
+.in-list.still-left .day_4,
+.onlyday1 .day_2, .onlyday1 .day_3, .onlyday1 .day_4,
+.onlyday2 .day_1, .onlyday2 .day_3, .onlyday2 .day_4,
+.onlyday3 .day_1, .onlyday3 .day_2, .onlyday3 .day_4,
+.onlyday4 .day_1, .onlyday4 .day_2, .onlyday4 .day_3,
+.onlyday1 .wholeday, .onlyday2 .wholeday, .onlyday3 .wholeday, .onlyday4 .wholeday {
+   visibility: hidden !important;
+   display: none !important;
+}
+
+.in-calendar.alldays  .event.workshop,
+.in-calendar.onlyday1 .event.workshop,
+.in-calendar.onlyday2 .event.workshop,
+.in-calendar.onlyday3 .event.workshop,
+.in-calendar.onlyday4 .event.workshop,
+.in-calendar.alldays  .workshop.room-label,
+.in-calendar.onlyday1 .workshop.room-label,
+.in-calendar.onlyday2 .workshop.room-label,
+.in-calendar.onlyday3 .workshop.room-label,
+.in-calendar.onlyday4 .workshop.room-label
+ {
+  visibility: hidden;
+  display: none;
+}
+
+/* Events in list that have a date set, will be marked */
+.fullnarp.in-list .event.day_1,
+.fullnarp.in-list .event.day_2,
+.fullnarp.in-list .event.day_3,
+.fullnarp.in-list .event.day_4 {
+    background-color: blue;
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.2em 0.2em 0 0.2em;
+    background-color: initial;
+}
+
+.speakers {
+    font-style: italic;
+    padding: 0.2em 0.2em 0.2em 0.4em;
+}
+
+.abstract {
+    padding: 0 0.2em 0.2em 0.2em;
+    border-radius: 0 0 5px 5px;
+}
+
+.title:hover,
+.abstract:hover,
+.speakers:hover,
+.event:hover .speakers,
+.event:hover .abstract,
+.event:hover .title,
+.speakers:hover + .abstract,
+.title:hover + .speakers + .abstract {
+    background: initial;
+    background-color: inherit;
+}
+
+.selected:hover,
+.friend:hover {
+    background: lime !important;
+    color: black;
+}
+
+/* Halfnarp results */
+.event .absval {
+    display: none;
+}
+
+.absolute .event .absval,
+.correlate .event .absval {
+    visibility: visible !important;
+    display: block !important;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    background: transparent;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.languages .lang_de { background: pink !important; }
+.languages .lang_en { background: cyan !important; }
+.corr-hint { display: none; font-weight: bold; }
+.correlate .corr-hint { display: initial !important; }
+
+.has_unavailable_speaker { border-style: dashed !important; }
+
+.in-calendar .class_2000.room6, .in-calendar .class_1000.room6, .in-calendar .class_500.room6,
+.in-calendar .class_2000.roomg, .in-calendar .class_1000.roomg,
+.in-calendar .class_2000.room2 {
+    background-image:
+        repeating-linear-gradient(
+          45deg,
+          #eee,
+          #eee 20px,
+          #ddd 20px,
+          #ddd 40px /* determines size */
+        );
+}
+
+/* Events in calendar where speakers are unavailable, will be marked */
+.in-calendar .unavailable {
+    background-image:
+        repeating-linear-gradient(
+          45deg,
+          black,
+          black 20px,
+          red 20px,
+          red 40px /* determines size */
+        ) !important;
+    color: white;
+}
+
+/* Events in calendar where speakers are unavailable, will be marked */
+.in-calendar .conflict {
+    background-image:
+        repeating-linear-gradient(
+          45deg,
+          black,
+          black 20px,
+          yellow 20px,
+          yellow 40px /* determines size */
+        ) !important;
+    color: red;
+}
+
+body.in-list .corrweb {
+    display: none !important;
+}
+
+.r, .rr, .rrr, .rrrr, .l, .ll, .lll, .llll {
+    position: absolute;
+    border: 8px solid;
+    height: 20px;
+    pointer-events: none;
+}
+
+.r, .rr, .l, .ll {
+    border-bottom: none;
+    border-top-right-radius: 50% 50%;
+    border-top-left-radius: 50% 50%;
+}
+
+.rrr, .rrrr, .lll, .llll {
+    border-top: none;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.corr_d_0 { border-color: #f0f0f0; }
+.corr_d_1 { border-color: #d0d0d0; }
+.corr_d_2 { border-color: #b0b0b0; }
+.corr_d_3 { border-color: #909090; }
+.corr_d_4 { border-color: #707070; }
+.corr_d_5 { border-color: #505050; }
+.corr_d_6 { border-color: #303030; }
+.corr_d_7 { border-color: #101010; }
+.corr_d_8 { border-color: #000000; }
+.corr_d_9 { border-color: #000000; }
+.corr_d_x { border-color: #0000ff; }
+
+.rr, .ll { margin-top: 15px; }
+.rr.room2, .rr.room4, .ll.room2, .ll.room4 { margin-top: 25px; }
+.rrr, .lll { margin-top: 35px; }
+.rrr.room2, .lll.room5 { margin-top: 45px; }
+.rrrr, .llll { margin-top: 55px; }
+
+/* FAQ */
+dt {
+    font-weight: bold;
+}
+
+dl {
+    width: 45em;
+    margin: auto;
+}
+
+/* to quickly hide elements */
+
+.hidden {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+.pending {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(255,255,0,1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(255,255,0,1);
+    box-shadow: 0px 0px 20px 5px rgba(255,255,0,1);
+}
+.pending-delete {
+    opacity: 0.25;
+}
+.failed {
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
+    box-shadow: 0px 0px 20px 5px rgba(255,0,0,1);
+}
+
+#qrcode {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    margin: 5px 0.8em 0;
+    padding 0;
+    border: 0;
+    width:  68px;
+    height: 68px;
+}
+
+.qrcode-huge #qrcode {
+    position: fixed;
+    display: block;
+    top: 20%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 400px;
+    padding: 0;
+}
+
+*[draggable=true] {
+  cursor: move;
+}
+
+/* Boring lists */
+
+body.absolute .class_5000 { background: #000000 !important; color: white !important; }
+body.absolute .class_2000 { background: #101010 !important; color: white !important; }
+body.absolute .class_1000 { background: #404040 !important; color: white !important; }
+body.absolute .class_500  { background: #707070 !important; color: white !important; }
+body.absolute .class_200  { background: #a0a0a0 !important; }
+body.absolute .class_100  { background: #c0c0c0 !important; }
+
+body.correlate .event[corr="0"] { background: #f0f0f0 !important; color: black !important; }
+body.correlate .event[corr="1"] { background: #d0d0d0 !important; color: black !important; }
+body.correlate .event[corr="2"] { background: #b0b0b0 !important; color: black !important; }
+body.correlate .event[corr="3"] { background: #909090 !important; color: black !important; }
+body.correlate .event[corr="4"] { background: #707070 !important; color: white !important; }
+body.correlate .event[corr="5"] { background: #505050 !important; color: white !important; }
+body.correlate .event[corr="6"] { background: #303030 !important; color: white !important; }
+body.correlate .event[corr="7"] { background: #101010 !important; color: white !important; }
+body.correlate .event[corr="8"] { background: #000000 !important; color: white !important; }
+body.correlate .event[corr="9"] { background: #000000 !important; color: white !important; }
+body.correlate .event[corr="x"] { background: #0000ff !important; color: white !important; }
+
+body.classifiers .event[intensity="10"] { background: #000000 !important; color: white !important; }
+body.classifiers .event[intensity="9"]  { background: #1A1A1A !important; color: white !important; }
+body.classifiers .event[intensity="8"]  { background: #333333 !important; color: white !important; }
+body.classifiers .event[intensity="7"]  { background: #4D4D4D !important; color: white !important; }
+body.classifiers .event[intensity="6"]  { background: #666666 !important; color: white !important; }
+body.classifiers .event[intensity="5"]  { background: #808080 !important; color: black !important; }
+body.classifiers .event[intensity="4"]  { background: #999999 !important; color: black !important; }
+body.classifiers .event[intensity="3"]  { background: #B3B3B3 !important; color: black !important; }
+body.classifiers .event[intensity="2"]  { background: #CCCCCC !important; color: black !important; }
+body.classifiers .event[intensity="1"]  { background: #E6E6E6 !important; color: black !important; }
+body.classifiers .event[intensity="0"]  { background: #FFFFFF !important; color: black !important; }
+
+body.classifiers .event[intensity="+0"]  { background: #FF7F00 !important; color: white !important; }
+body.classifiers .event[intensity="+1"]  { background: #E67F1A !important; color: white !important; }
+body.classifiers .event[intensity="+2"]  { background: #CC7F33 !important; color: white !important; }
+body.classifiers .event[intensity="+3"]  { background: #B37F4D !important; color: white !important; }
+body.classifiers .event[intensity="+4"]  { background: #997F66 !important; color: white !important; }
+body.classifiers .event[intensity="+5"]  { background: #807F80 !important; color: white !important; }
+body.classifiers .event[intensity="+6"]  { background: #667F99 !important; color: white !important; }
+body.classifiers .event[intensity="+7"]  { background: #4D7FB3 !important; color: white !important; }
+body.classifiers .event[intensity="+8"]  { background: #337FCC !important; color: white !important; }
+body.classifiers .event[intensity="+9"]  { background: #1A7FE6 !important; color: white !important; }
+body.classifiers .event[intensity="+10"] { background: #007FFF !important; color: white !important; }
+
+body.classifiers .legend,
+body.classifiers .vclass
+{ background: grey !important; border-color: grey; }
+
+body.classifiers[classifier="Ethics, Politics + Society"] .vclass[classifier="Ethics, Politics + Society"],
+body.classifiers[classifier="Entertainment"]     .vclass[classifier="Entertainment"],
+body.classifiers[classifier="Art + Culture"]     .vclass[classifier="Art + Culture"],
+body.classifiers[classifier="Security"]          .vclass[classifier="Security"],
+body.classifiers[classifier="Resilience"]        .vclass[classifier="Resilience"],
+body.classifiers[classifier="Science"]           .vclass[classifier="Science"],
+body.classifiers[classifier="Hardware"]          .vclass[classifier="Hardware"],
+body.classifiers[classifier="Foundations"]       .vclass[classifier="Foundations"]
+{ background-color: red !important; border-color: red; }
+
+body.classifiers[classifier="Defense - Offense"] .vclass[classifier="Defense - Offense"],
+body.classifiers[classifier="Theory - Practice"] .vclass[classifier="Theory - Practice"],
+body.classifiers[classifier="Novelty"]           .vclass[classifier="Novelty"]
+{
+  background: linear-gradient(left, #ff7f00, #007fff) !important;
+  background: -webkit-linear-gradient(left, #ff7f00, #007fff) !important;
+  background: -o-linear-gradient(left, #ff7f00, #007fff) !important;
+  background: -moz-linear-gradient(left, #ff7f00, #007fff) !important;
+  border: red 2px solid;
+}
+
+.in-calendar.size-large.alldays .event { font-size: 0.8em; }
+.in-calendar.size-medium.alldays .event { font-size: 0.6em; }
+.in-calendar.size-medium         .event { font-size: 0.9em; }
+.in-calendar.size-small.alldays .event { font-size: 0.4em; }
+.in-calendar.size-small         .event { font-size: 0.8em; }
+
+.size-medium .event { font-size: 1.2em; }
+.size-large .event  { font-size: 1.5em; }
+.in-list.size-small  .event { width: 10em; }
+.in-list.size-medium .event { width: 12em; }
+.in-list.size-large  .event { width: 14em; }
+
+.halfnarp.size-small.in-list  .event { min-height: 10em; max-height: 10em; }
+.halfnarp.size-medium.in-list .event { min-height: 12em; max-height: 12em; }
+.halfnarp.size-large.in-list  .event { min-height: 14em; max-height: 14em; }
+
+.track_358 { border: 2px solid #4D4D4C; } /* CCC */
+.track_359 { border: 2px solid #4D4D4C; } /* Entertainment */
+.track_360 { border: 2px solid #E40429; } /* ESP */
+.track_363 { border: 2px solid #18386B; } /* Security */
+.track_357 { border: 2px solid #F9B000; } /* A&C */
+.track_362 { border: 2px solid #00A356; } /* Science */
+.track_361 { border: 2px solid #44357E; } /* Hardware */
+.track_364 { border: 2px solid #0084B0; } /* Resilience */
+
+.all-tracks .track_358 { background-color: #4d4d4c !important; background-image: none !important; } /* CCC */
+.all-tracks .track_359 { background-color: #4d4d4c !important; background-image: none !important; } /* Entertainment */
+.all-tracks .track_360 { background-color: #E40429 !important; background-image: none !important; } /* ESP */
+.all-tracks .track_363 { background-color: #18386B !important; background-image: none !important; color: white; } /* Security */
+.all-tracks .track_357 { background-color: #F9B000 !important; background-image: none !important; color: black; } /* A&C */
+.all-tracks .track_362 { background-color: #00A356 !important; background-image: none !important; } /* Science */
+.all-tracks .track_361 { background-color: #44357E !important; background-image: none !important; } /* Hardware */
+.all-tracks .track_364 { background-color: #0084B0 !important; background-image: none !important; color: white; } /* Resilience */
+
+.vclass,
+.legend,
+.two_poles {
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  margin-left: 1em;
+  margin-bottom: 0.2em;
+  padding: 0.3em;
+}
+.vclass {
+  background: orange;
+  cursor: pointer;
+}
+.two_poles {
+  border: solid white 2px;
+  background: linear-gradient(left, #ff7f00, #007fff);
+  background: -webkit-linear-gradient(left, #ff7f00, #007fff);
+  background: -o-linear-gradient(left, #ff7f00, #007fff);
+  background: -moz-linear-gradient(left, #ff7f00, #007fff);
+}
+.vclass:hover {
+  background: grey !important;
+  border-color: grey;
+}
+
+.in-calendar .event:hover,
+.highlighted {
+    max-height: initial !important;
+    /* overflow: visible; */
+    z-index: 1;
+    background: #333;
+    color: white;
+}
+
+.in-calendar.in-drag .event.is-dragged,
+.in-calendar.in-drag .highlighted {
+    max-height: 10px !important;
+    height: 10px !important;
+    overflow: hidden !important;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.in-list .event:hover,
+.highlighted {
+    overflow: visible;
+    z-index: 1;
+    background: #333;
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    background-color: #c3c3c3;
+    min-width: 640px;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.header{
+    width: 100%;
+    display: block;
+}
+
+.header__right{
+    float: right;
+}
+
+label{
+    display: block;
+    line-height: 1.5em;
+    padding: 1em;
+    padding-bottom: 0;
+    font-size: 0.75em;
+}
+
+.footer__filter-side{
+    float: left;
+}
+
+a{
+    color: #000;
+}

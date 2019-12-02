@@ -146,10 +146,10 @@ function check_avail(el, day, time ) {
     $.each(speaker.availabilities,function(j,a) {
 
       switch( a.day_id ) {
-        case 370: if( day != '1' ) { have_avails = true; return true; } break;
-        case 371: if( day != '2' ) { have_avails = true; return true; } break;
-        case 372: if( day != '3' ) { have_avails = true; return true; } break;
-        case 373: if( day != '4' ) { have_avails = true; return true; } break;
+        case 392: if( day != '1' ) { have_avails = true; return true; } break;
+        case 393: if( day != '2' ) { have_avails = true; return true; } break;
+        case 394: if( day != '3' ) { have_avails = true; return true; } break;
+        case 395: if( day != '4' ) { have_avails = true; return true; } break;
         default: return true;
       }
       have_avails = true;
@@ -232,10 +232,9 @@ function set_all_attributes(event_id, day, room, time, from_server) {
       return (css.match (/\btime_\S+|day_\S+|room\S+/g) || []).join(' ');
     });
     el.addClass( time + ' ' + day + ' ' + room );
-    var li = { 'room': room, 'day': day, 'time': time };
-    el.attr('fullnarp-day',  li['day'].replace('day_',''));
-    el.attr('fullnarp-time', li['time'].replace('time_',''));
-    el.attr('fullnarp-room', li['room'].replace('room',''));
+    el.attr('fullnarp-day',  day.replace('day_',''));
+    el.attr('fullnarp-time', time.replace('time_',''));
+    el.attr('fullnarp-room', room.replace('room',''));
     el.removeClass('pending');
 
     if (!from_server) {
@@ -283,7 +282,7 @@ function getFullnarpData(lastupdate) {
             // set lastupdate
             window.lastupdate = response.current_version;
             current_version_string = ('00000'+response.current_version).slice(-5);
-            $('.version').html('<a href="https://erdgeist.org/halfnarp/versions/fullnarp_'+current_version_string+'.json">Version: '+response.current_version+'</a>')
+            $('.version').html('<a href="https://erdgeist.org/36C3/halfnarp/versions/fullnarp_'+current_version_string+'.json">Version: '+response.current_version+'</a>')
             // call again in 1 second
             setTimeout('getFullnarpData('+lastupdate+');', 1000);
         },
@@ -296,14 +295,14 @@ function getFullnarpData(lastupdate) {
 };
 
 function do_the_fullnarp() {
-  var halfnarpAPI     = 'talks_35C3.json';
-  var fullnarpAPI     = 'votes_35c3.json';
+  var halfnarpAPI     = 'talks_36C3.json';
+  var fullnarpAPI     = 'votes_36c3.json';
   // var halfnarpAPI  = '/-/talkpreferences';
   var halfnarpPubAPI  = halfnarpAPI + '/public/';
   var myuid, mypid    = new Object();
   var allrooms        = ['1','2','3','4','5']
   var allminutes      = ['00','10','20','30','40','50']
-  var allhours        = ['11','12','13','14','15','16','17','18','19','20','21','22','23','00','01'];
+  var allhours        = ['10','11','12','13','14','15','16','17','18','19','20','21','22','23','00','01','02'];
   var alldays         = ['1','2','3','4'];
   var voted           = 0;
   window.event_speakers = {};
@@ -462,7 +461,7 @@ function do_the_fullnarp() {
                 console.log("Foo");
               $.each(speaker.availabilities, function(j,a) {
                   switch( a.day_id ) {
-                  case 370: case 371: case 372: case 373: have_avails = true; return true;
+                  case 392: case 393: case 394: case 395: have_avails = true; return true;
                   default: return true;
                   }
               });
@@ -533,8 +532,8 @@ function do_the_fullnarp() {
           if( hour < 9 )
               day--;
 
-          /* Fix up room for 35c3 */
-          room = (item.room_id || '').toString().replace('421','room1').replace('422','room2').replace('423','room3').replace('424','room4').replace('425','room5');
+          /* Fix up room for 36c3 */
+          room = (item.room_id || '').toString().replace('451','room1').replace('452','room2').replace('453','room3').replace('454','room4').replace('455','room5');
 
           /* Apply attributes to sort events into calendar */
           t.addClass( room + ' day_'+day + ' time_' + (hour<10?'0':'') + hour + '' + (mins<10?'0':'') + mins );
@@ -581,16 +580,17 @@ function do_the_fullnarp() {
       return;
     switch( e.charCode ) {
       case 115: case 83: /* s */
-/*
         var selected = $('.selected');
         if( selected.length != 2 ) return;
-        var li1 = JSON.parse( localStorage[ '33C3-fullnarp-'+selected[0].id ] || '{}' );
-        var li2 = JSON.parse( localStorage[ '33C3-fullnarp-'+selected[1].id ] || '{}' );
-        if( li1['room'] && li2['room'] ) {
-          set_all_attributes( $(selected[1]).attr('id'), li1['day'], li1['room'], li1['time'], false );
-          set_all_attributes( $(selected[0]).attr('id'), li2['day'], li2['room'], li2['time'], false );
-        }
-*/
+
+        var day = $(selected[0]).attr('fullnarp-day');
+        var hour = $(selected[0]).attr('fullnarp-time');
+        var room = $(selected[0]).attr('fullnarp-room');
+
+        set_all_attributes( $(selected[0]).attr('id'),
+            $(selected[1]).attr('fullnarp-day'), $(selected[1]).attr('fullnarp-room'), $(selected[1]).attr('fullnarp-time'), false);
+        set_all_attributes( $(selected[1]).attr('id'), day, room, hour, false);
+
         break;
       case 48: case 94: /* 0 */
         toggle_grid(5);
